@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ENstars Guessing Game</title>
+<title>ENStarsdle</title>
 <link rel="icon" href="./images/icon.png" type="image/png">
 <style>
-body { font-family: sans-serif; padding: 20px; }
+body { font-family: sans-serif; padding: 20px; background: url('./images/background.png') no-repeat center center fixed; background-size: cover; display: flex;
+    flex-direction: column;
+    align-items: center;}
 .dropdown { position: relative; display: inline-block; width: 300px; }
 input { width: 100%; padding: 8px; box-sizing: border-box; }
 .dropdown-content {
@@ -33,13 +35,16 @@ input { width: 100%; padding: 8px; box-sizing: border-box; }
   border-radius: 50%;
 }
 .feedback {
-  margin-top: 20px; display: flex; flex-direction: column; }
+  margin-top: 20px; }
 .feedback div { text-align: center; border: 1px solid black; }
 .feedback img { display: block; margin: 0 auto; }
 .guess-row {
   display: flex;
   width: fit-content;
   margin-bottom: 10px;
+  background: black;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .guess-cell {
   border: 1px solid black;
@@ -50,8 +55,9 @@ input { width: 100%; padding: 8px; box-sizing: border-box; }
   justify-content: center;
   box-sizing: border-box;
   font-size: 14px;
-  overflow: hidden; 
 }
+.icon-cell { overflow: hidden; border-bottom-left-radius: 35px; }
+.last-cell { border-top-right-radius: 35px; }
 .correct { background-color: #a8e6a1; } /* green */
 .wrong { background-color: #f5a8a8; }   /* red */
 .daily { margin-top: 20px; border: 1px solid #ccc; padding: 10px; display:flex; align-items:center; width:fit-content;}
@@ -61,7 +67,7 @@ button { margin-left:10px; padding:5px 10px; }
 </head>
 <body>
 
-<h1>ENstars Guessing Game</h1>
+<h1>ENStarsdle</h1>
 
 <div class="dropdown">
   <input type="text" id="guessInput" placeholder="Type to guess a character">
@@ -81,6 +87,7 @@ button { margin-left:10px; padding:5px 10px; }
 // -------------------------
 // CONFIG / DATA
 // -------------------------
+let gameWon = false;
 let characters = [];
 let dropdown = document.getElementById('dropdown');
 let input = document.getElementById('guessInput');
@@ -183,15 +190,42 @@ function onInput() {
 }
 
 // -------------------------
-// HANDLE GUESS
+// HANDLE GUESS AND WIN CHECK
 // -------------------------
 function handleGuess(guessChar) {
+
+  if (gameWon) return; // prevent guessing after win
+
   remainingCharacters = remainingCharacters.filter(c =>
-    c.first_name !== guessChar.first_name || c.last_name !== guessChar.last_name
+    c.first_name !== guessChar.first_name ||
+    c.last_name !== guessChar.last_name
   );
+
   renderDropdown(remainingCharacters);
   input.value = '';
+
   displayFeedback(guessChar);
+
+  // ✅ WIN CHECK
+  if (
+    guessChar.first_name === dailyCharacter.first_name &&
+    guessChar.last_name === dailyCharacter.last_name
+  ) {
+    handleWin();
+  }
+}
+
+function handleWin() {
+  gameWon = true;
+
+  // Disable input
+  input.disabled = true;
+  dropdown.style.display = 'none';
+
+  // Optional: change placeholder text
+  input.placeholder = "You guessed correctly! 🎉";
+
+  console.log("You win!");
 }
 
 // -------------------------
@@ -218,8 +252,8 @@ function displayFeedback(guessChar) {
   // FACE ICON (neutral color)
   const iconImg = document.createElement('img');
   iconImg.src = `./images/characters/${guessChar.first_name}_${guessChar.last_name}/icon.png`;
-  iconImg.style.width = '105%';
-  iconImg.style.height = '105%';
+  iconImg.style.width = '110%';
+  iconImg.style.height = '110%';
   iconImg.style.objectFit = 'cover';
   iconImg.onerror = () => iconImg.style.display = 'none';
 
@@ -295,7 +329,7 @@ function displayFeedback(guessChar) {
     unitImg.onerror = () => unitImg.style.display = 'none';
   }
 
-  guessRow.appendChild(createCell(unitImg, guessUnit === correctUnit));
+  guessRow.appendChild(createCell(unitImg, guessUnit === correctUnit, 'last-cell'));
 
   feedbackDiv.appendChild(guessRow);
 }

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ENstars Guessing Game</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; }
+  .dropdown { position: relative; display: inline-block; width: 300px; }
+  input { width: 100%; padding: 8px; box-sizing: border-box; }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 10;
+  }
+  .dropdown-content div {
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .dropdown-content div:hover { background-color: #f0f0f0; }
+  .dropdown-content img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .feedback { margin-top: 20px; }
+  .feedback div { margin-bottom: 5px; }
+</style>
+</head>
+<body>
+
+<h1>ENstars Guessing Game</h1>
+
+<div class="dropdown">
+  <input type="text" id="guessInput" placeholder="Type to guess a character">
+  <div class="dropdown-content" id="dropdown"></div>
+</div>
+
+<div class="feedback" id="feedback"></div>
+
+<script>
+let characters = [];
+let dropdown = document.getElementById('dropdown');
+let input = document.getElementById('guessInput');
+let feedbackDiv = document.getElementById('feedback');
+let dailyCharacter = null;
+
+// Load characters.json with error handling
+fetch('characters.json')
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(`Failed to fetch characters.json: ${res.status} ${res.statusText}`);
+    }
+    return res.json();
+  })
+  .then(data => {
+    characters = data;
+    console.log(`Loaded ${characters.length} characters from JSON`);
+    
+    // Flatten hobbies and specialties
+    characters.forEach(c => {
+      c.hobbies = c.hobbies?.[0]?.value?.map(v => v.toLowerCase()) || [];
+      c.specialties = c.specialties?.[0]?.value?.map(v => v.toLowerCase()) || [];
+    });
+
+    pickDailyCharacter();
+    initDropdown();
+  })
+  .catch(err => {
+    console.error('Error loading characters.json:', err);
+    dropdown.innerHTML = `<div style="color:red;">Error loading characters.json. Check console.</div>`;
+  });
+
+// Pick a random daily character (demo)
+function pickDailyCharacter() {
+  if (characters.length === 0) return;
+  const index = Math.floor(Math.random() * characters.length);
+  dailyCharacter = characters[index];
+  console.log('Daily character selected:', dailyCharacter.first_name, dailyCharacter.last_name);
+}
+
+// Initialize dropdown behavior
+function initDropdown() {
+  renderDropdown(characters);
+
+  input.addEventListener('input', onInput);
+  input.addEventListener('focus', () => dropdown.style.display = 'block');
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.dropdown')) dropdown.style.display = 'none';
+  });
+}
+
+// Render dropdown items
+function renderDropdown(list) {
+  dropdown.innerHTML = '';
+
+  if (list.length === 0) {
+    const div = document.createElement('div');
+    div.textContent = 'No matches';
+    dropdown.appendChild(div);
+    return;
+  }
+
+  list.forEach(c => {
+    const div = document.createElement('div');
+    const img = document.createElement('img');
+    img.src = `./images/${c.first_name}_${c.last_name}/icon.png`;
+    img.onerror = () => { img.style.display = 'none'; };
+    div.appendChild(img);
+    div.appendChild(document.createTextNode(`${c.first_name} ${c.last_name}`));
+    div.addEventListener('click', () => {
+      input.value = `${c.first_name} ${c.last_name}`;
+      dropdown.style.display = 'none';
+      checkGuess(c);
+    });
+    dropdown.appendChild(div);
+  });
+}
+
+// Filter dropdown as user types
+function onInput() {
+  const val = input.value.trim().toLowerCase();
+  const filtered = characters.filter(c =>
+    c.first_name.toLowerCase().startsWith(val) ||
+    c.last_name.toLowerCase().startsWith(val)
+  );
+  renderDropdown(filtered);
+  dropdown.style.display = 'block';
+}
+
+// Evaluate guess
+function checkGuess(guessChar) {
+  feedbackDiv.innerHTML = '';
+
+  function addFeedback(label, value) {
+    const div = document.createElement('div');
+    div.textContent = `${label}: ${value}`;
+    feedbackDiv.appendChild(div);
+  }
+
+  if (!dailyCharacter) {
+    addFeedback('Error', 'Daily character not set');
+    return;
+  }
+
+  // Height
+  if (guessChar.height > dailyCharacter.height) addFeedback('Height', 'Lower');
+  else if (guessChar.height < dailyCharacter.height) addFeedback('Height', 'Higher');
+  else addFeedback('Height', 'Correct');
+
+  // Handedness
+  addFeedback('Handedness', guessChar.handedness === dailyCharacter.handedness ? 'Correct' : 'Wrong');
+
+  // School
+  addFeedback('School', guessChar.school === dailyCharacter.school ? 'Correct' : 'Wrong');
+
+  // Class
+  addFeedback('Class', guessChar.class === dailyCharacter.class ? 'Correct' : 'Wrong');
+
+  // Hobbies
+  const sharedHobbies = guessChar.hobbies.filter(h => dailyCharacter.hobbies.includes(h));
+  addFeedback('Hobbies', sharedHobbies.length > 0 ? `Shared: ${sharedHobbies.join(', ')}` : 'None');
+
+  // Specialties
+  const sharedSpecs = guessChar.specialties.filter(s => dailyCharacter.specialties.includes(s));
+  addFeedback('Specialties', sharedSpecs.length > 0 ? `Shared: ${sharedSpecs.join(', ')}` : 'None');
+}
+</script>
+</body>
+</html>

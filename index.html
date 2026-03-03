@@ -32,7 +32,9 @@
     border-radius: 50%;
   }
   .feedback { margin-top: 20px; }
-  .feedback div { margin-bottom: 5px; }
+  .feedback div { margin-bottom: 5px; padding: 4px; border-radius: 4px; }
+  .correct { background-color: #a8e6a1; } /* green */
+  .wrong { background-color: #f5a8a8; }   /* red */
 </style>
 </head>
 <body>
@@ -47,29 +49,31 @@
 <div class="feedback" id="feedback"></div>
 
 <script>
+// -------------------------
+// CONFIG / DATA
+// -------------------------
 let characters = [];
 let dropdown = document.getElementById('dropdown');
 let input = document.getElementById('guessInput');
 let feedbackDiv = document.getElementById('feedback');
 let dailyCharacter = null;
+let remainingCharacters = [];
 
-// Load characters.json with error handling
+// Load characters.json
 fetch('characters.json')
-  .then(res => {
-    if (!res.ok) {
-      throw new Error(`Failed to fetch characters.json: ${res.status} ${res.statusText}`);
-    }
-    return res.json();
-  })
+  .then(res => res.json())
   .then(data => {
     characters = data;
-    console.log(`Loaded ${characters.length} characters from JSON`);
+    console.log(`Loaded ${characters.length} characters`);
     
-    // Flatten hobbies and specialties
+    // Flatten hobbies & specialties
     characters.forEach(c => {
       c.hobbies = c.hobbies?.[0]?.value?.map(v => v.toLowerCase()) || [];
       c.specialties = c.specialties?.[0]?.value?.map(v => v.toLowerCase()) || [];
     });
+
+    // Clone for remaining dropdown
+    remainingCharacters = [...characters];
 
     pickDailyCharacter();
     initDropdown();
@@ -79,30 +83,30 @@ fetch('characters.json')
     dropdown.innerHTML = `<div style="color:red;">Error loading characters.json. Check console.</div>`;
   });
 
-// Pick a random daily character (demo)
+// -------------------------
+// PICK DAILY CHARACTER
+// -------------------------
 function pickDailyCharacter() {
   if (characters.length === 0) return;
   const index = Math.floor(Math.random() * characters.length);
   dailyCharacter = characters[index];
-  console.log('Daily character selected:', dailyCharacter.first_name, dailyCharacter.last_name);
+  console.log('Daily character:', dailyCharacter.first_name, dailyCharacter.last_name);
 }
 
-// Initialize dropdown behavior
+// -------------------------
+// DROPDOWN / AUTOCOMPLETE
+// -------------------------
 function initDropdown() {
-  renderDropdown(characters);
-
+  renderDropdown(remainingCharacters);
   input.addEventListener('input', onInput);
   input.addEventListener('focus', () => dropdown.style.display = 'block');
-
   document.addEventListener('click', e => {
     if (!e.target.closest('.dropdown')) dropdown.style.display = 'none';
   });
 }
 
-// Render dropdown items
 function renderDropdown(list) {
   dropdown.innerHTML = '';
-
   if (list.length === 0) {
     const div = document.createElement('div');
     div.textContent = 'No matches';
@@ -120,59 +124,73 @@ function renderDropdown(list) {
     div.addEventListener('click', () => {
       input.value = `${c.first_name} ${c.last_name}`;
       dropdown.style.display = 'none';
-      checkGuess(c);
+      handleGuess(c);
     });
     dropdown.appendChild(div);
   });
 }
 
-// Filter dropdown as user types
 function onInput() {
   const val = input.value.trim().toLowerCase();
-  const filtered = characters.filter(c =>
-    c.first_name.toLowerCase().startsWith(val) ||
-    c.last_name.toLowerCase().startsWith(val)
+  const filtered = remainingCharacters.filter(c =>
+    c.first_name.toLowerCase().includes(val) ||
+    c.last_name.toLowerCase().includes(val)
   );
   renderDropdown(filtered);
   dropdown.style.display = 'block';
 }
 
-// Evaluate guess
-function checkGuess(guessChar) {
+// -------------------------
+// HANDLE GUESS
+// -------------------------
+function handleGuess(guessChar) {
+  // Remove guessed character from dropdown
+  remainingCharacters = remainingCharacters.filter(c =>
+    c.first_name !== guessChar.first_name || c.last_name !== guessChar.last_name
+  );
+
+  renderDropdown(remainingCharacters);
+
+  // Clear input
+  input.value = '';
+
+  // Display feedback
+  displayFeedback(guessChar);
+}
+
+function displayFeedback(guessChar) {
   feedbackDiv.innerHTML = '';
 
-  function addFeedback(label, value) {
+  function addFeedback(label, text, correct) {
     const div = document.createElement('div');
-    div.textContent = `${label}: ${value}`;
+    div.textContent = text;
+    div.className = correct ? 'correct' : 'wrong';
     feedbackDiv.appendChild(div);
   }
 
-  if (!dailyCharacter) {
-    addFeedback('Error', 'Daily character not set');
-    return;
-  }
-
   // Height
-  if (guessChar.height > dailyCharacter.height) addFeedback('Height', 'Lower');
-  else if (guessChar.height < dailyCharacter.height) addFeedback('Height', 'Higher');
-  else addFeedback('Height', 'Correct');
+  if (guessChar.height > dailyCharacter.height) addFeedback('Height', `< ${guessChar.height}`, false);
+  else if (guessChar.height < dailyCharacter.height) addFeedback('Height', `> ${guessChar.height}`, false);
+  else addFeedback('Height', `${guessChar.height}`, true);
 
   // Handedness
-  addFeedback('Handedness', guessChar.handedness === dailyCharacter.handedness ? 'Correct' : 'Wrong');
+  addFeedback('Handedness', guessChar.handedness, guessChar.handedness === dailyCharacter.handedness);
 
   // School
-  addFeedback('School', guessChar.school === dailyCharacter.school ? 'Correct' : 'Wrong');
+  addFeedback('School', guessChar.school, guessChar.school === dailyCharacter.school);
 
   // Class
-  addFeedback('Class', guessChar.class === dailyCharacter.class ? 'Correct' : 'Wrong');
+  addFeedback('Class', guessChar.class, guessChar.class === dailyCharacter.class);
 
   // Hobbies
-  const sharedHobbies = guessChar.hobbies.filter(h => dailyCharacter.hobbies.includes(h));
-  addFeedback('Hobbies', sharedHobbies.length > 0 ? `Shared: ${sharedHobbies.join(', ')}` : 'None');
+  guessChar.hobbies.forEach(h => {
+    addFeedback('Hobby', h, dailyCharacter.hobbies.includes(h));
+  });
 
   // Specialties
-  const sharedSpecs = guessChar.specialties.filter(s => dailyCharacter.specialties.includes(s));
-  addFeedback('Specialties', sharedSpecs.length > 0 ? `Shared: ${sharedSpecs.join(', ')}` : 'None');
+  guessChar.specialties.forEach(s => {
+    addFeedback('Specialty', s, dailyCharacter.specialties.includes(s));
+  });
 }
 </script>
 </body>

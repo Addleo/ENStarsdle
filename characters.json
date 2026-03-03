@@ -47,8 +47,8 @@
     "dislike": "Carrots",
     "family": "Parents",
     "favorite_food": "Kalbi",
-    "handedness": "Right",
-    "height_old": "168 cm"
+    "handedness": "Right-handed",
+    "height": "172 cm"
   },
   {
     "compliant": "TRUE",
@@ -99,8 +99,8 @@
     "dislike": "Crowds",
     "family": "Parents, younger brother, younger sister",
     "favorite_food": "Miso soup",
-    "handedness": "Right",
-    "height_old": "165 cm",
+    "handedness": "Right-handed",
+    "height": "165 cm",
     "circle/2": "gardenia"
   },
   {
@@ -150,8 +150,8 @@
     "dislike": "Bitter melons",
     "family": "Parents, younger sister",
     "favorite_food": "Omurice",
-    "handedness": "Right",
-    "height_old": "167 cm"
+    "handedness": "Right-handed",
+    "height": "168 cm"
   },
   {
     "compliant": "TRUE",
@@ -198,8 +198,8 @@
     "dislike": "Spicy food",
     "family": "Father, Yuta Aoi (twin brother), two pet cats",
     "favorite_food": "Sweet cream puffs",
-    "handedness": "Right",
-    "height_old": "168 cm"
+    "handedness": "Right-handed",
+    "height": "170 cm"
   },
   {
     "compliant": "TRUE",
@@ -243,8 +243,8 @@
     "dislike": "Fish eyeballs",
     "family": "Parents, older brother",
     "favorite_food": "Pizza, basil",
-    "handedness": "Right",
-    "height_old": "178 cm"
+    "handedness": "Right-handed",
+    "height": "179 cm"
   },
   {
     "compliant": "TRUE",
@@ -285,8 +285,8 @@
     "dislike": "Cold places",
     "family": "Parents, younger sister, pet dog",
     "favorite_food": "Corn",
-    "handedness": "Right",
-    "height_old": "152 cm"
+    "handedness": "Right-handed",
+    "height": "154 cm"
   },
   {
     "compliant": "TRUE",
@@ -327,8 +327,8 @@
     "dislike": "Cats",
     "family": "Parents",
     "favorite_food": "Umeboshi",
-    "handedness": "Right",
-    "height_old": "159 cm"
+    "handedness": "Right-handed",
+    "height": "161 cm"
   },
   {
     "compliant": "TRUE",
@@ -371,8 +371,8 @@
     "dislike": "Insects",
     "family": "Father, Hinata Aoi (twin brother), two pet cats",
     "favorite_food": "Tabasco sauce",
-    "handedness": "Left",
-    "height_old": "168 cm"
+    "handedness": "Left-handed",
+    "height": "170 cm"
   },
   {
     "compliant": "TRUE",
@@ -414,8 +414,8 @@
     "dislike": "Hats, wearing things on his head",
     "family": "Parents, older brother, older sister",
     "favorite_food": "Hamburger steak",
-    "handedness": "Right",
-    "height_old": "167 cm"
+    "handedness": "Right-handed",
+    "height": "168 cm"
   },
   {
     "compliant": "TRUE",
@@ -456,8 +456,8 @@
     "dislike": "Insects",
     "family": "Parents, Kohaku Oukawa (cousin)",
     "favorite_food": "Snacks",
-    "handedness": "Right",
-    "height_old": "167 cm",
+    "handedness": "Right-handed",
+    "height": "168 cm",
     "circle/2": "teakaori"
   },
   {
@@ -500,8 +500,8 @@
     "dislike": "Small, dark places",
     "family": "Mother, pet dog",
     "favorite_food": "Fried egg",
-    "handedness": "Right",
-    "height_old": "170 cm"
+    "handedness": "Right-handed",
+    "height": "172 cm"
   },
   {
     "compliant": "TRUE",
@@ -542,8 +542,8 @@
     "dislike": "His parents",
     "family": "Mother, Seiya Hidaka (father)",
     "favorite_food": "Konpeito",
-    "handedness": "Right",
-    "height_old": "172 cm"
+    "handedness": "Right-handed",
+    "height": "173 cm"
   },
   {
     "compliant": "TRUE",
@@ -584,8 +584,8 @@
     "dislike": "Prawn and fish",
     "family": "Mother",
     "favorite_food": "Snacks (pocky)",
-    "handedness": "Right",
-    "height_old": "173 cm"
+    "handedness": "Right-handed",
+    "height": "174 cm"
   },
   {
     "compliant": "TRUE",
@@ -627,8 +627,8 @@
     "dislike": "Dishonest people",
     "family": "Parents, younger brother",
     "favorite_food": "Sushi",
-    "handedness": "Right",
-    "height_old": "173 cm"
+    "handedness": "Right-handed",
+    "height": "174 cm"
   },
   {
     "compliant": "TRUE",
@@ -669,8 +669,8 @@
     "dislike": "Gadgets",
     "family": "Mother, three older sisters",
     "favorite_food": "Anpan",
-    "handedness": "Right",
-    "height_old": "-"
+    "handedness": "Right-handed",
+    "height": "178 cm"
   },
   {
     "compliant": "TRUE",
@@ -712,8 +712,8 @@
     "dislike": "Cute stuff, strong odors",
     "family": "Parents, pet dog",
     "favorite_food": "Grilled chicken",
-    "handedness": "Right",
-    "height_old": "174 cm"
+    "handedness": "Right-handed",
+    "height": "175 cm"
   },
   {
     "compliant": "TRUE",
@@ -754,8 +754,8 @@
     "dislike": "Disturbance of sleep & garlic",
     "family": "Parents, Rei Sakuma (older brother)",
     "favorite_food": "Carbonated drinks",
-    "handedness": "Left",
-    "height_old": "170 cm"
+    "handedness": "Left-handed",
+    "height": "171 cm"
   },
   {
     "compliant": "TRUE",
@@ -797,8 +797,8 @@
     "dislike": "Sharp objects",
     "family": "Parents, younger sister",
     "favorite_food": "Ramen",
-    "handedness": "Right",
-    "height_old": "169 cm"
+    "handedness": "Right-handed",
+    "height": "171 cm"
   },
   {
     "compliant": "TRUE",
@@ -839,8 +839,8 @@
     "dislike": "Dogs",
     "family": "Parents",
     "favorite_food": "White fish",
-    "handedness": "Right",
-    "height_old": "175 cm"
+    "handedness": "Right-handed",
+    "height": "175 cm"
   },
   {
     "compliant": "TRUE",
@@ -881,8 +881,8 @@
     "dislike": "Troublesome things",
     "family": "Parents, older brother, pet cat",
     "favorite_food": "Chicken Karaage",
-    "handedness": "Right",
-    "height_old": "175 cm"
+    "handedness": "Right-handed",
+    "height": "176 cm"
   },
   {
     "compliant": "TRUE",
@@ -920,8 +920,8 @@
     "dislike": "Soybeans",
     "family": "Parents, older brother",
     "favorite_food": "Spicy Foods",
-    "handedness": "Right",
-    "height_old": "178 cm",
+    "handedness": "Right-handed",
+    "height": "178 cm",
     "circle/2": "archivemanga"
   },
   {
@@ -960,8 +960,8 @@
     "dislike": "Hospital food, IV drops",
     "family": "Mother, father",
     "favorite_food": "Sautéed veal",
-    "handedness": "Left",
-    "height_old": "179 cm"
+    "handedness": "Left-handed",
+    "height": "179 cm"
   },
   {
     "compliant": "TRUE",
@@ -1000,8 +1000,8 @@
     "dislike": "People that gripe and nag",
     "family": "Father, older brother, older sister",
     "favorite_food": "Pancakes with lots of cream",
-    "handedness": "Right",
-    "height_old": "178 cm"
+    "handedness": "Right-handed",
+    "height": "178 cm"
   },
   {
     "compliant": "TRUE",
@@ -1039,8 +1039,8 @@
     "dislike": "Heat",
     "family": "Parents",
     "favorite_food": "Shrimp",
-    "handedness": "Right",
-    "height_old": "172 cm"
+    "handedness": "Right-handed",
+    "height": "174 cm"
   },
   {
     "compliant": "TRUE",
@@ -1078,8 +1078,8 @@
     "dislike": "Eggplants",
     "family": "Parents",
     "favorite_food": "French fries",
-    "handedness": "Right",
-    "height_old": "175 cm"
+    "handedness": "Right-handed",
+    "height": "175 cm"
   },
   {
     "compliant": "TRUE",
@@ -1119,8 +1119,8 @@
     "dislike": "Vehicles",
     "family": "Father, younger sister",
     "favorite_food": "Steak",
-    "handedness": "Right",
-    "height_old": "180 cm"
+    "handedness": "Right-handed",
+    "height": "181 cm"
   },
   {
     "compliant": "TRUE",
@@ -1158,8 +1158,8 @@
     "dislike": "Unknown",
     "family": "Mother, father, pet birds",
     "favorite_food": "Rainbow jelly",
-    "handedness": "Right",
-    "height_old": "179 cm"
+    "handedness": "Right-handed",
+    "height": "180 cm"
   },
   {
     "compliant": "TRUE",
@@ -1197,8 +1197,8 @@
     "dislike": "Hot water",
     "family": "Unknown",
     "favorite_food": "Soy sauce",
-    "handedness": "Right",
-    "height_old": "176 cm"
+    "handedness": "Right-handed",
+    "height": "176 cm"
   },
   {
     "compliant": "TRUE",
@@ -1236,8 +1236,8 @@
     "dislike": "Noisy things",
     "family": "Parents, Ritsu Sakuma (younger brother)",
     "favorite_food": "Dry-cured ham",
-    "handedness": "Right",
-    "height_old": "179 cm"
+    "handedness": "Right-handed",
+    "height": "180 cm"
   },
   {
     "compliant": "TRUE",
@@ -1275,8 +1275,8 @@
     "dislike": "Frogs",
     "family": "Parents, pet rabbit",
     "favorite_food": "Ice cream",
-    "handedness": "Right",
-    "height_old": "160 cm"
+    "handedness": "Right-handed",
+    "height": "160 cm"
   },
   {
     "compliant": "TRUE",
@@ -1309,8 +1309,8 @@
     "dislike": "People who disturb his naps",
     "family": "Parents",
     "favorite_food": "Corn soup",
-    "handedness": "Right",
-    "height_old": "178 cm"
+    "handedness": "Right-handed",
+    "height": "178 cm"
   },
   {
     "compliant": "TRUE",
@@ -1342,8 +1342,8 @@
     "dislike": "Slovenly people",
     "family": "Parents",
     "favorite_food": "White wine, Spaghetti alle vongole",
-    "handedness": "Right",
-    "height_old": "178 cm"
+    "handedness": "Right-handed",
+    "height": "178 cm"
   },
   {
     "compliant": "TRUE",
@@ -1382,7 +1382,7 @@
     "family": "Parents, Ruka Tsukinaga (younger sister)",
     "favorite_food": "Coffee",
     "handedness": "Ambidextrous",
-    "height_old": "168 cm"
+    "height": "169 cm"
   },
   {
     "compliant": "TRUE",
@@ -1423,8 +1423,8 @@
     "dislike": "His own eyes, others' gazes",
     "family": "Parents",
     "favorite_food": "Candy",
-    "handedness": "Right",
-    "height_old": "171 cm"
+    "handedness": "Right-handed",
+    "height": "172 cm"
   },
   {
     "compliant": "TRUE",
@@ -1462,8 +1462,8 @@
     "dislike": "Places with many people",
     "family": "Grandfather, parents, older brother, older sister",
     "favorite_food": "Croissants",
-    "handedness": "Right",
-    "height_old": "177 cm"
+    "handedness": "Right-handed",
+    "height": "177 cm"
   },
   {
     "compliant": "TRUE",
@@ -1505,8 +1505,8 @@
     "dislike": "Dark places",
     "family": "Parents, younger sister",
     "favorite_food": "Snacks, apples",
-    "handedness": "Right",
-    "height_old": "163 cm"
+    "handedness": "Right-handed",
+    "height": "166 cm"
   },
   {
     "compliant": "TRUE",
@@ -1547,8 +1547,8 @@
     "dislike": "Being tied down",
     "family": "Parents, two pet cats",
     "favorite_food": "Foods with two different flavors",
-    "handedness": "Right",
-    "height_old": "168 cm",
+    "handedness": "Right-handed",
+    "height": "171 cm",
     "circle/2": "lectureibara"
   },
   {
@@ -1589,8 +1589,8 @@
     "dislike": "The cold, hurting others",
     "family": "Parents, stepfather, older brother",
     "favorite_food": "Warm, sweet foods (like just-made pancakes and anman)",
-    "handedness": "Right",
-    "height_old": "176 cm"
+    "handedness": "Right-handed",
+    "height": "176 cm"
   },
   {
     "compliant": "TRUE",
@@ -1628,8 +1628,8 @@
     "dislike": "Getting compared",
     "family": "Parents, younger sister",
     "favorite_food": "Soba, onigiri",
-    "handedness": "Right",
-    "height_old": "180 cm",
+    "handedness": "Right-handed",
+    "height": "180 cm",
     "unit/1": "doubleface"
   },
   {
@@ -1668,8 +1668,8 @@
     "dislike": "Old things, romanticists",
     "family": "Parents, older brother, pet dog",
     "favorite_food": "Pie, quiche (especially with salmon)",
-    "handedness": "Right",
-    "height_old": "177 cm"
+    "handedness": "Right-handed",
+    "height": "177 cm"
   },
   {
     "compliant": "TRUE",
@@ -1709,8 +1709,8 @@
     "dislike": "Harassment from Hiyori",
     "family": "Parents",
     "favorite_food": "Strawberries",
-    "handedness": "Right",
-    "height_old": "173 cm"
+    "handedness": "Right-handed",
+    "height": "174 cm"
   },
   {
     "compliant": "TRUE",
@@ -1748,8 +1748,8 @@
     "dislike": "Himself",
     "family": "Parents, younger sister, younger brother",
     "favorite_food": "Chocolate",
-    "handedness": "Right",
-    "height_old": "178 cm"
+    "handedness": "Right-handed",
+    "height": "178 cm"
   },
   {
     "compliant": "TRUE",
@@ -1790,8 +1790,8 @@
     "dislike": "Incompetence​",
     "family": "Parents",
     "favorite_food": "Nutritional supplements",
-    "handedness": "Left",
-    "height_old": "172 cm"
+    "handedness": "Left-handed",
+    "height": "173 cm"
   },
   {
     "compliant": "TRUE",
@@ -1830,7 +1830,8 @@
     "club": "Karate Team",
     "family": "Rinne Amagi (older brother)",
     "favorite_food": "Lemon",
-    "handedness": "Right"
+    "handedness": "Right-handed",
+    "height": "174 cm"
   },
   {
     "compliant": "TRUE",
@@ -1868,7 +1869,8 @@
     ],
     "club": "Basketball Team",
     "favorite_food": "Quiche, chocolate",
-    "handedness": "Right"
+    "handedness": "Right-handed",
+    "height": "167 cm"
   },
   {
     "compliant": "TRUE",
@@ -1906,7 +1908,8 @@
     ],
     "club": "Ninja Association",
     "favorite_food": "Grapes",
-    "handedness": "Right"
+    "handedness": "Right-handed",
+    "height": "174 cm"
   },
   {
     "compliant": "TRUE",
@@ -1945,7 +1948,8 @@
       }
     ],
     "favorite_food": "Any kind of black tea",
-    "handedness": "Right"
+    "handedness": "Right-handed",
+    "height": "177 cm"
   },
   {
     "compliant": "TRUE",
@@ -1981,7 +1985,8 @@
     ],
     "family": "Hiiro Amagi (younger brother)",
     "favorite_food": "Pizza",
-    "handedness": "Right"
+    "handedness": "Right-handed",
+    "height": "181 cm"
   },
   {
     "compliant": "TRUE",
@@ -2016,7 +2021,8 @@
       }
     ],
     "favorite_food": "Cola, Breath mints",
-    "handedness": "Right"
+    "handedness": "Right-handed",
+    "height": "178 cm"
   },
   {
     "compliant": "TRUE",
@@ -2054,7 +2060,8 @@
     ],
     "family": "Older sisters, Tsukasa Suou (cousin)",
     "favorite_food": "Japanese sweets",
-    "handedness": "Right",
+    "handedness": "Right-handed",
+    "height": "168 cm",
     "unit/1": "doubleface"
   },
   {
@@ -2101,7 +2108,8 @@
     ],
     "family": "Parents",
     "favorite_food": "Japanese food",
-    "handedness": "Left"
+    "handedness": "Left-handed",
+    "height": "177 cm"
   },
   {
     "compliant": "TRUE",
@@ -2136,7 +2144,8 @@
         "value": "With a strong drive to take on new challenges, Esu has a lively personality, always full of energy. He's always restless, moving and talking non-stop, but he loves adventures and is in many ways, versatile. He is a member of NEW DIMENSION's Special for Princess! and serves as the leader. He's looking forward the adventures he'll be embarking on within the new environment of being an idol and is hoping to discover his own identity as an idol."
       }
     ],
-    "handedness": "Right"
+    "handedness": "Right-handed",
+    "height": "160 cm"
   },
   {
     "compliant": "TRUE",
@@ -2172,7 +2181,8 @@
         "value": "Born in Okinawa and raised in America, Ibuki goes around without a care in the world but can also be quick to start a fight. He's an eloquent speaker and a logical thinker despite his age. He was invited by Nice to the reality competition show \"4piece\" and is participating because it piqued his interest."
       }
     ],
-    "handedness": "Left"
+    "handedness": "Left-handed",
+    "height": "165 cm"
   },
   {
     "compliant": "TRUE",
@@ -2207,7 +2217,8 @@
         "value": "A robot-like boy that analyzes, categorizes, and evaluates both people and objects. He doesn't have a large range of emotions and tries to get by through the most basic, simplistic form of communication. He is a member of NEW DIMENSION's Special for Princess!. As long as he is given an environment where his personal safety is ensured, he has no intention of making any special effort and believes that focusing only on what is necessary is fine."
       }
     ],
-    "handedness": "Right"
+    "handedness": "Right-handed",
+    "height": "163 cm"
   },
   {
     "compliant": "TRUE",
@@ -2242,7 +2253,8 @@
         "value": "An egocentric boy who is blinded by devotion. He has experience as a cosplayer, and is particular about how he presents himself. He is a member of NEW DIMENSION's Special for Princess!. While he firmly believes he knows best how to present himself, he is willing to make any effort necessary if it means Esu can become the ideal idol."
       }
     ],
-    "handedness": "Right"
+    "handedness": "Right-handed",
+    "height": "156 cm"
   },
   {
     "compliant": "TRUE",
@@ -2277,7 +2289,7 @@
         "value": "A cheerful and humble boy who's a bit sticky-fingered. He loves singing. He lacks a bit of common sense and has a hard time discerning \"right\" from wrong. He is a member of NEW DIMENSION's Special for Princess!. He wants to enjoy being an idol alongside the person he admires and have lots of people to listen to his songs."
       }
     ],
-    "handedness": "Right"
+    "handedness": "Right-handed",
+    "height": "158 cm"
   }
-
 ]

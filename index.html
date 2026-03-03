@@ -3,38 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <title>ENstars Guessing Game</title>
+<link rel="icon" href="./images/icon.png" type="image/png">
 <style>
-  body { font-family: sans-serif; padding: 20px; }
-  .dropdown { position: relative; display: inline-block; width: 300px; }
-  input { width: 100%; padding: 8px; box-sizing: border-box; }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    max-height: 300px;
-    overflow-y: auto;
-    width: 100%;
-    z-index: 10;
-  }
-  .dropdown-content div {
-    padding: 5px 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
-  .dropdown-content div:hover { background-color: #f0f0f0; }
-  .dropdown-content img {
-    width: 30px;
-    height: 30px;
-    margin-right: 8px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  .feedback { margin-top: 20px; }
-  .feedback div { margin-bottom: 5px; padding: 4px; border-radius: 4px; }
-  .correct { background-color: #a8e6a1; } /* green */
-  .wrong { background-color: #f5a8a8; }   /* red */
+body { font-family: sans-serif; padding: 20px; }
+.dropdown { position: relative; display: inline-block; width: 300px; }
+input { width: 100%; padding: 8px; box-sizing: border-box; }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 300px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 10;
+}
+.dropdown-content div {
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.dropdown-content div:hover { background-color: #f0f0f0; }
+.dropdown-content img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.feedback {
+  margin-top: 20px; display: flex; flex-direction: column; }
+.feedback div { text-align: center; border: 1px solid black; }
+.feedback img { display: block; margin: 0 auto; }
+.guess-row {
+  display: flex;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+.guess-cell {
+  border: 1px solid black;
+  width: 120px;          /* uniform width */
+  height: 120px;          /* uniform height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 14px;
+  overflow: hidden; 
+}
+.correct { background-color: #a8e6a1; } /* green */
+.wrong { background-color: #f5a8a8; }   /* red */
+.daily { margin-top: 20px; border: 1px solid #ccc; padding: 10px; display:flex; align-items:center; width:fit-content;}
+.daily img { width:40px;height:40px;margin-right:8px;border-radius:50%;}
+button { margin-left:10px; padding:5px 10px; }
 </style>
 </head>
 <body>
@@ -48,6 +70,13 @@
 
 <div class="feedback" id="feedback"></div>
 
+<!-- Daily character display for testing -->
+<div id="dailyDisplay" class="daily">
+  <img id="dailyImg" src="" alt="Daily Character">
+  <span id="dailyName"></span>
+  <button id="rerollBtn">Reroll</button>
+</div>
+
 <script>
 // -------------------------
 // CONFIG / DATA
@@ -59,22 +88,19 @@ let feedbackDiv = document.getElementById('feedback');
 let dailyCharacter = null;
 let remainingCharacters = [];
 
-// Load characters.json
+// Daily character display elements
+let dailyImg = document.getElementById('dailyImg');
+let dailyName = document.getElementById('dailyName');
+let rerollBtn = document.getElementById('rerollBtn');
+
+// Load JSON
 fetch('characters.json')
   .then(res => res.json())
   .then(data => {
     characters = data;
     console.log(`Loaded ${characters.length} characters`);
-    
-    // Flatten hobbies & specialties
-    characters.forEach(c => {
-      c.hobbies = c.hobbies?.[0]?.value?.map(v => v.toLowerCase()) || [];
-      c.specialties = c.specialties?.[0]?.value?.map(v => v.toLowerCase()) || [];
-    });
 
-    // Clone for remaining dropdown
     remainingCharacters = [...characters];
-
     pickDailyCharacter();
     initDropdown();
   })
@@ -91,7 +117,23 @@ function pickDailyCharacter() {
   const index = Math.floor(Math.random() * characters.length);
   dailyCharacter = characters[index];
   console.log('Daily character:', dailyCharacter.first_name, dailyCharacter.last_name);
+  updateDailyDisplay();
 }
+
+// Update daily display for testing
+function updateDailyDisplay() {
+  dailyName.textContent = `${dailyCharacter.first_name} ${dailyCharacter.last_name}`;
+  dailyImg.src = `./images/characters/${dailyCharacter.first_name}_${dailyCharacter.last_name}/icon.png`;
+  dailyImg.onerror = () => { dailyImg.style.display = 'none'; };
+  dailyImg.style.display = 'block';
+}
+
+// Reroll button
+rerollBtn.addEventListener('click', () => {
+  pickDailyCharacter();
+  remainingCharacters = characters.filter(c => c !== dailyCharacter); // reset remaining
+  renderDropdown(remainingCharacters);
+});
 
 // -------------------------
 // DROPDOWN / AUTOCOMPLETE
@@ -117,7 +159,7 @@ function renderDropdown(list) {
   list.forEach(c => {
     const div = document.createElement('div');
     const img = document.createElement('img');
-    img.src = `./images/${c.first_name}_${c.last_name}/icon.png`;
+    img.src = `./images/characters/${c.first_name}_${c.last_name}/icon.png`;
     img.onerror = () => { img.style.display = 'none'; };
     div.appendChild(img);
     div.appendChild(document.createTextNode(`${c.first_name} ${c.last_name}`));
@@ -144,53 +186,118 @@ function onInput() {
 // HANDLE GUESS
 // -------------------------
 function handleGuess(guessChar) {
-  // Remove guessed character from dropdown
   remainingCharacters = remainingCharacters.filter(c =>
     c.first_name !== guessChar.first_name || c.last_name !== guessChar.last_name
   );
-
   renderDropdown(remainingCharacters);
-
-  // Clear input
   input.value = '';
-
-  // Display feedback
   displayFeedback(guessChar);
 }
 
+// -------------------------
+// DISPLAY FEEDBACK
+// -------------------------
 function displayFeedback(guessChar) {
-  feedbackDiv.innerHTML = '';
 
-  function addFeedback(label, text, correct) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    div.className = correct ? 'correct' : 'wrong';
-    feedbackDiv.appendChild(div);
+  const guessRow = document.createElement('div');
+  guessRow.className = 'guess-row';
+
+  function createCell(content, correct, extraClass = '') {
+    const cell = document.createElement('div');
+    cell.className = `guess-cell ${extraClass} ${correct ? 'correct' : 'wrong'}`;
+
+    if (typeof content === 'string') {
+      cell.textContent = content;
+    } else {
+      cell.appendChild(content);
+    }
+
+    return cell;
   }
 
-  // Height
-  if (guessChar.height > dailyCharacter.height) addFeedback('Height', `< ${guessChar.height}`, false);
-  else if (guessChar.height < dailyCharacter.height) addFeedback('Height', `> ${guessChar.height}`, false);
-  else addFeedback('Height', `${guessChar.height}`, true);
+  // FACE ICON (neutral color)
+  const iconImg = document.createElement('img');
+  iconImg.src = `./images/characters/${guessChar.first_name}_${guessChar.last_name}/icon.png`;
+  iconImg.style.width = '105%';
+  iconImg.style.height = '105%';
+  iconImg.style.objectFit = 'cover';
+  iconImg.onerror = () => iconImg.style.display = 'none';
 
-  // Handedness
-  addFeedback('Handedness', guessChar.handedness, guessChar.handedness === dailyCharacter.handedness);
+  const iconCell = document.createElement('div');
+  iconCell.className = 'guess-cell icon-cell';
+  iconCell.appendChild(iconImg);
 
-  // School
-  addFeedback('School', guessChar.school, guessChar.school === dailyCharacter.school);
+  guessRow.appendChild(iconCell);
 
-  // Class
-  addFeedback('Class', guessChar.class, guessChar.class === dailyCharacter.class);
+  // HEIGHT
+  let heightText = '?';
+  let heightCorrect = false;
 
-  // Hobbies
-  guessChar.hobbies.forEach(h => {
-    addFeedback('Hobby', h, dailyCharacter.hobbies.includes(h));
-  });
+  if (dailyCharacter.height !== undefined && guessChar.height !== undefined) {
+    if (guessChar.height > dailyCharacter.height) {
+      heightText = `< ${guessChar.height}`;
+    } else if (guessChar.height < dailyCharacter.height) {
+      heightText = `> ${guessChar.height}`;
+    } else {
+      heightText = `${guessChar.height}`;
+      heightCorrect = true;
+    }
+  }
 
-  // Specialties
-  guessChar.specialties.forEach(s => {
-    addFeedback('Specialty', s, dailyCharacter.specialties.includes(s));
-  });
+  guessRow.appendChild(createCell(heightText, heightCorrect));
+
+  // HANDEDNESS
+  const handedness = guessChar.handedness ?? '?';
+  guessRow.appendChild(
+    createCell(handedness, handedness === dailyCharacter.handedness)
+  );
+
+  // SCHOOL
+  const guessSchool = guessChar.school ?? 'Not in school';
+  const correctSchool = dailyCharacter.school ?? 'Not in school';
+  guessRow.appendChild(createCell(guessSchool, guessSchool === correctSchool));
+
+  // CLASS
+  const guessClass = guessChar.class ?? 'Not in school';
+  const correctClass = dailyCharacter.class ?? 'Not in school';
+  guessRow.appendChild(createCell(guessClass, guessClass === correctClass));
+
+  // AGENCY
+  const guessAgency = guessChar.agency ?? '?';
+  const correctAgency = dailyCharacter.agency ?? '?';
+
+  const agencyImg = document.createElement('img');
+  agencyImg.style.width = '90%';
+  agencyImg.style.height = '90%';
+  agencyImg.style.objectFit = 'contain';
+
+  if (guessAgency !== '?') {
+    agencyImg.src = `./images/Agencies/${guessAgency}.png`;
+    agencyImg.onerror = () => agencyImg.style.display = 'none';
+  }
+
+  guessRow.appendChild(createCell(agencyImg, guessAgency === correctAgency));
+
+  // UNIT
+  const guessUnit = guessChar.unit ?? '?';
+  const correctUnit = dailyCharacter.unit ?? '?';
+
+  const unitImg = document.createElement('img');
+  unitImg.style.width = '90%';
+  unitImg.style.height = '90%';
+  unitImg.style.objectFit = 'contain';
+
+  if (guessUnit !== '?') {
+    if (guessUnit === 'Crazy:B') unitImg.src = `./images/Units/CrazyB.png`;
+    else if (guessUnit === 'Ra*bits') unitImg.src = `./images/Units/Ra'bits.png`;
+    else unitImg.src = `./images/Units/${guessUnit}.png`;
+
+    unitImg.onerror = () => unitImg.style.display = 'none';
+  }
+
+  guessRow.appendChild(createCell(unitImg, guessUnit === correctUnit));
+
+  feedbackDiv.appendChild(guessRow);
 }
 </script>
 </body>

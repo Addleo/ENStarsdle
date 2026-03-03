@@ -4,8 +4,8 @@
     "character_id": 1,
     "last_name": "Nagumo",
     "first_name": "Tetora",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "RYUSEITAI",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "RYUSEITAI",
     "character_voice": "Yoshiki Nakajima",
     "hobbies": [
       "frying pan cooking (learning)",
@@ -55,8 +55,8 @@
     "character_id": 2,
     "last_name": "Shino",
     "first_name": "Hajime",
-    "producer": "Rhythm Link",
-    "band": "Ra*bits",
+    "agency": "Rhythm Link",
+    "unit": "Ra*bits",
     "character_voice": "Tomoya Kosaka",
     "hobbies": [
       "drawing",
@@ -108,8 +108,8 @@
     "character_id": 3,
     "last_name": "Mashiro",
     "first_name": "Tomoya",
-    "producer": "Rhythm Link",
-    "band": "Ra*bits",
+    "agency": "Rhythm Link",
+    "unit": "Ra*bits",
     "character_voice": "Shunya Hiruma",
     "hobbies": [
       "listening to music",
@@ -158,8 +158,8 @@
     "character_id": 4,
     "last_name": "Aoi",
     "first_name": "Hinata",
-    "producer": "COSMIC PRODUCTION",
-    "band": "2wink",
+    "agency": "COSMIC PRODUCTION",
+    "unit": "2wink",
     "character_voice": "Soma Saito",
     "hobbies": [
       "doing pretend concerts",
@@ -206,8 +206,8 @@
     "character_id": 5,
     "last_name": "Takamine",
     "first_name": "Midori",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "RYUSEITAI",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "RYUSEITAI",
     "character_voice": "Takumi Watanabe",
     "hobbies": [
       "collecting mascot characters"
@@ -251,8 +251,8 @@
     "character_id": 6,
     "last_name": "Himemiya",
     "first_name": "Tori",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "fine",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "fine",
     "character_voice": "Ayumu Murase",
     "hobbies": [
       "karaoke"
@@ -293,8 +293,8 @@
     "character_id": 7,
     "last_name": "Sengoku",
     "first_name": "Shinobu",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "RYUSEITAI",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "RYUSEITAI",
     "character_voice": "Anju Nitta",
     "hobbies": [
       "raising frogs"
@@ -335,8 +335,8 @@
     "character_id": 8,
     "last_name": "Aoi",
     "first_name": "Yuta",
-    "producer": "COSMIC PRODUCTION",
-    "band": "2wink",
+    "agency": "COSMIC PRODUCTION",
+    "unit": "2wink",
     "first_nameRuby": "Yuuta",
     "character_voice": "Soma Saito",
     "hobbies": [
@@ -379,8 +379,8 @@
     "character_id": 9,
     "last_name": "Tenma",
     "first_name": "Mitsuru",
-    "producer": "Rhythm Link",
-    "band": "Ra*bits",
+    "agency": "Rhythm Link",
+    "unit": "Ra*bits",
     "character_voice": "Daiki Kobayashi",
     "hobbies": [
       "basking in the sun",
@@ -422,8 +422,8 @@
     "character_id": 10,
     "last_name": "Suou",
     "first_name": "Tsukasa",
-    "producer": "NEW DIMENSION",
-    "band": "Knights",
+    "agency": "NEW DIMENSION",
+    "unit": "Knights",
     "character_voice": "Reio Tsuchida",
     "hobbies": [
       "playing chess"
@@ -465,8 +465,8 @@
     "character_id": 11,
     "last_name": "Akehoshi",
     "first_name": "Subaru",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "Trickstar",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "Trickstar",
     "character_voice": "Tetsuya Kakihara",
     "hobbies": [
       "making nicknames",
@@ -508,8 +508,8 @@
     "character_id": 12,
     "last_name": "Hidaka",
     "first_name": "Hokuto",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "Trickstar",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "Trickstar",
     "character_voice": "Tomoaki Maeno",
     "hobbies": [
       "crossword puzzles"
@@ -550,8 +550,8 @@
     "character_id": 13,
     "last_name": "Yuuki",
     "first_name": "Makoto",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "Trickstar",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "Trickstar",
     "character_voice": "Shotaro Morikubo",
     "hobbies": [
       "playing on crane machines and fighting games"
@@ -592,8 +592,8 @@
     "character_id": 14,
     "last_name": "Kanzaki",
     "first_name": "Souma",
-    "producer": "Rhythm Link",
-    "band": "AKATSUKI",
+    "agency": "Rhythm Link",
+    "unit": "AKATSUKI",
     "character_voice": "Keisuke Kaminaga",
     "hobbies": [
       "cooking",
@@ -635,8 +635,8 @@
     "character_id": 15,
     "last_name": "Otogari",
     "first_name": "Adonis",
-    "producer": "Rhythm Link",
-    "band": "UNDEAD",
+    "agency": "Rhythm Link",
+    "unit": "UNDEAD",
     "character_voice": "Wataru Hatano",
     "hobbies": [
       "staring at small creatures"
@@ -677,8 +677,8 @@
     "character_id": 16,
     "last_name": "Ogami",
     "first_name": "Koga",
-    "producer": "Rhythm Link",
-    "band": "UNDEAD",
+    "agency": "Rhythm Link",
+    "unit": "UNDEAD",
     "last_nameRuby": "Oogami",
     "character_voice": "Yuki Ono",
     "hobbies": [
@@ -720,8 +720,8 @@
     "character_id": 17,
     "last_name": "Sakuma",
     "first_name": "Ritsu",
-    "producer": "NEW DIMENSION",
-    "band": "Knights",
+    "agency": "NEW DIMENSION",
+    "unit": "Knights",
     "character_voice": "Daiki Yamashita",
     "hobbies": [
       "sleeping"
@@ -762,8 +762,8 @@
     "character_id": 18,
     "last_name": "Isara",
     "first_name": "Mao",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "Trickstar",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "Trickstar",
     "character_voice": "Yuki Kaji",
     "hobbies": [
       "reading manga",
@@ -805,8 +805,8 @@
     "character_id": 19,
     "last_name": "Fushimi",
     "first_name": "Yuzuru",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "fine",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "fine",
     "character_voice": "Koutaro Hashimoto",
     "hobbies": [
       "cleaning"
@@ -847,8 +847,8 @@
     "character_id": 20,
     "last_name": "Narukami",
     "first_name": "Arashi",
-    "producer": "NEW DIMENSION",
-    "band": "Knights",
+    "agency": "NEW DIMENSION",
+    "unit": "Knights",
     "character_voice": "Ryo Kitamura",
     "hobbies": [
       "shopping"
@@ -889,8 +889,8 @@
     "character_id": 21,
     "last_name": "Hasumi",
     "first_name": "Keito",
-    "producer": "Rhythm Link",
-    "band": "AKATSUKI",
+    "agency": "Rhythm Link",
+    "unit": "AKATSUKI",
     "character_voice": "Yuichiro Umehara",
     "hobbies": [
       "reading"
@@ -929,8 +929,8 @@
     "character_id": 22,
     "last_name": "Tenshouin",
     "first_name": "Eichi",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "fine",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "fine",
     "character_voice": "Hikaru Midorikawa",
     "hobbies": [
       "collecting teacups"
@@ -968,8 +968,8 @@
     "character_id": 23,
     "last_name": "Hakaze",
     "first_name": "Kaoru",
-    "producer": "Rhythm Link",
-    "band": "UNDEAD",
+    "agency": "Rhythm Link",
+    "unit": "UNDEAD",
     "character_voice": "Kei Hosogai",
     "hobbies": [
       "dating",
@@ -1008,8 +1008,8 @@
     "character_id": 24,
     "last_name": "Sena",
     "first_name": "Izumi",
-    "producer": "NEW DIMENSION",
-    "band": "Knights",
+    "agency": "NEW DIMENSION",
+    "unit": "Knights",
     "character_voice": "Masami Ito",
     "hobbies": [
       "bullying underclassmen"
@@ -1017,10 +1017,10 @@
     "specialties": [
       "ballet"
     ],
-    "quote": "You've become quite the hotshot, huh Producer?",
+    "quote": "You've become quite the hotshot, huh agency?",
     "quotes": [
       {
-        "value": "You've become quite the hotshot, huh Producer?"
+        "value": "You've become quite the hotshot, huh agency?"
       }
     ],
     "tagline": "The Wishing Knight Who Chases Dreams",
@@ -1047,8 +1047,8 @@
     "character_id": 25,
     "last_name": "Morisawa",
     "first_name": "Chiaki",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "RYUSEITAI",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "RYUSEITAI",
     "character_voice": "Yuichi Jose",
     "hobbies": [
       "watching superhero shows"
@@ -1086,8 +1086,8 @@
     "character_id": 26,
     "last_name": "Kiryu",
     "first_name": "Kuro",
-    "producer": "Rhythm Link",
-    "band": "AKATSUKI",
+    "agency": "Rhythm Link",
+    "unit": "AKATSUKI",
     "last_nameRuby": "Kiryuu",
     "first_nameRuby": "Kurou",
     "character_voice": "Shinichiro Kamio",
@@ -1127,8 +1127,8 @@
     "character_id": 27,
     "last_name": "Hibiki",
     "first_name": "Wataru",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "fine",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "fine",
     "character_voice": "Takuya Eguchi",
     "hobbies": [
       "mimicking others"
@@ -1166,8 +1166,8 @@
     "character_id": 28,
     "last_name": "Shinkai",
     "first_name": "Kanata",
-    "producer":"STARMAKER PRODUCTION",
-    "band": "RYUSEITAI",
+    "agency":"STARMAKER PRODUCTION",
+    "unit": "RYUSEITAI",
     "character_voice": "Kotaro Nishiyama",
     "hobbies": [
       "taking walks on the beach"
@@ -1205,8 +1205,8 @@
     "character_id": 29,
     "last_name": "Sakuma",
     "first_name": "Rei",
-    "producer":"Rhythm Link",
-    "band": "UNDEAD",
+    "agency":"Rhythm Link",
+    "unit": "UNDEAD",
     "character_voice": "Toshiki Masuda",
     "hobbies": [
       "strolls in the garden"
@@ -1244,8 +1244,8 @@
     "character_id": 30,
     "last_name": "Nito",
     "first_name": "Nazuna",
-    "producer": "Rhythm Link",
-    "band": "Ra*bits",
+    "agency": "Rhythm Link",
+    "unit": "Ra*bits",
     "character_voice": "Yuki Yonai",
     "hobbies": [
       "mobile games"
@@ -1283,8 +1283,8 @@
     "character_id": 31,
     "last_name": "Sagami",
     "first_name": "Jin",
-    "producer": "Ensemble Square",
-    "band": "none",
+    "agency": "Ensemble Square",
+    "unit": "none",
     "character_voice": "Tomoyasu Hishiba",
     "hobbies": [
       "drinking alcohol",
@@ -1317,8 +1317,8 @@
     "character_id": 32,
     "last_name": "Kunugi",
     "first_name": "Akiomi",
-    "producer": "Ensemble Square",
-    "band": "none",
+    "agency": "Ensemble Square",
+    "unit": "none",
     "character_voice": "Wataru Komada",
     "hobbies": [
       "reading aloud"
@@ -1350,8 +1350,8 @@
     "character_id": 33,
     "last_name": "Tsukinaga",
     "first_name": "Leo",
-    "producer": "NEW DIMENSION",
-    "band": "Knights",
+    "agency": "NEW DIMENSION",
+    "unit": "Knights",
     "character_voice": "Shintaro Asanuma",
     "hobbies": [
       "composing"
@@ -1389,8 +1389,8 @@
     "character_id": 34,
     "last_name": "Kagehira",
     "first_name": "Mika",
-    "producer": "COSMIC PRODUCTION",
-    "band": "Valkyrie",
+    "agency": "COSMIC PRODUCTION",
+    "unit": "Valkyrie",
     "character_voice": "Jun Osuka",
     "hobbies": [
       "collecting stuffed toys"
@@ -1431,8 +1431,8 @@
     "character_id": 35,
     "last_name": "Itsuki",
     "first_name": "Shu",
-    "producer": "COSMIC PRODUCTION",
-    "band": "Valkyrie",
+    "agency": "COSMIC PRODUCTION",
+    "unit": "Valkyrie",
     "character_voice": "Hiroki Takahashi",
     "hobbies": [
       "making clothes for dolls"
@@ -1470,8 +1470,8 @@
     "character_id": 37,
     "last_name": "Harukawa",
     "first_name": "Sora",
-    "producer": "NEW DIMENSION",
-    "band": "Switch",
+    "agency": "NEW DIMENSION",
+    "unit": "Switch",
     "character_voice": "Kazutomi Yamamoto",
     "hobbies": [
       "listening to music",
@@ -1513,8 +1513,8 @@
     "character_id": 38,
     "last_name": "Sakasaki",
     "first_name": "Natsume",
-    "producer": "NEW DIMENSION",
-    "band": "Switch",
+    "agency": "NEW DIMENSION",
+    "unit": "Switch",
     "character_voice": "Kenji Nojima",
     "hobbies": [
       "none"
@@ -1556,8 +1556,8 @@
     "character_id": 39,
     "last_name": "Aoba",
     "first_name": "Tsumugi",
-    "producer": "NEW DIMENSION",
-    "band": "Switch",
+    "agency": "NEW DIMENSION",
+    "unit": "Switch",
     "character_voice": "Kaito Ishikawa",
     "hobbies": [
       "feng shui",
@@ -1597,8 +1597,8 @@
     "character_id": 40,
     "last_name": "Mikejima",
     "first_name": "Madara",
-    "producer": "NEW DIMENSION",
-    "band": "MaM",
+    "agency": "NEW DIMENSION",
+    "unit": "MaM",
     "character_voice": "Toriumi Kousuke",
     "hobbies": [
       "searching for fun"
@@ -1637,8 +1637,8 @@
     "character_id": 41,
     "last_name": "Tomoe",
     "first_name": "Hiyori",
-    "producer": "COSMIC PRODUCTION",
-    "band": "Eden",
+    "agency": "COSMIC PRODUCTION",
+    "unit": "Eden",
     "character_voice": "Natsuki Hanae",
     "hobbies": [
       "shopping"
@@ -1676,8 +1676,8 @@
     "character_id": 42,
     "last_name": "Sazanami",
     "first_name": "Jun",
-    "producer": "COSMIC PRODUCTION",
-    "band": "Eden",
+    "agency": "COSMIC PRODUCTION",
+    "unit": "Eden",
     "character_voice": "Yuma Uchida",
     "hobbies": [
       "sarcasm"
@@ -1717,8 +1717,8 @@
     "character_id": 50,
     "last_name": "Ran",
     "first_name": "Nagisa",
-    "producer": "COSMIC PRODUCTION",
-    "band": "Eden",
+    "agency": "COSMIC PRODUCTION",
+    "unit": "Eden",
     "character_voice": "Junichi Suwabe",
     "hobbies": [
       "relations with people"
@@ -1756,8 +1756,8 @@
     "character_id": 51,
     "last_name": "Saegusa",
     "first_name": "Ibara",
-    "producer": "COSMIC PRODUCTION",
-    "band": "Eden",
+    "agency": "COSMIC PRODUCTION",
+    "unit": "Eden",
     "character_voice": "Ryota Osaka",
     "hobbies": [
       "strategizing"
@@ -1798,8 +1798,8 @@
     "character_id": 67,
     "last_name": "Amagi",
     "first_name": "Hiiro",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "ALKALOID",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "ALKALOID",
     "character_voice": "Gakuto Kajiwara",
     "hobbies": [
       "collecting silver"
@@ -1837,8 +1837,8 @@
     "character_id": 68,
     "last_name": "Shiratori",
     "first_name": "Aira",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "ALKALOID",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "ALKALOID",
     "character_voice": "Kohei Amasaki",
     "hobbies": [
       "idol research"
@@ -1875,8 +1875,8 @@
     "character_id": 69,
     "last_name": "Ayase",
     "first_name": "Mayoi",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "ALKALOID",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "ALKALOID",
     "character_voice": "Chiharu Shigematsu",
     "hobbies": [
       "making dioramas"
@@ -1913,8 +1913,8 @@
     "character_id": 70,
     "last_name": "Kazehaya",
     "first_name": "Tatsumi",
-    "producer": "STARMAKER PRODUCTION",
-    "band": "ALKALOID",
+    "agency": "STARMAKER PRODUCTION",
+    "unit": "ALKALOID",
     "character_voice": "Masatomo Nakazawa",
     "hobbies": [
       "keeping things tidy",
@@ -1952,8 +1952,8 @@
     "character_id": 71,
     "last_name": "Amagi",
     "first_name": "Rinne",
-    "producer":"COSMIC PRODUCTION",
-    "band": "Crazy:B",
+    "agency":"COSMIC PRODUCTION",
+    "unit": "Crazy:B",
     "character_voice": "Yohei Azakami",
     "hobbies": [
       "gambling"
@@ -1961,10 +1961,10 @@
     "specialties": [
       "ad-libbing"
     ],
-    "quote": "The god of gambling hasn't abandoned me, not yet!",
+    "quote": "The god of gambling hasn't aunitoned me, not yet!",
     "quotes": [
       {
-        "value": "The god of gambling hasn't abandoned me, not yet!"
+        "value": "The god of gambling hasn't aunitoned me, not yet!"
       }
     ],
     "tagline": "The Thrill-Seeking Gambler",
@@ -2023,8 +2023,8 @@
     "character_id": 73,
     "last_name": "Oukawa",
     "first_name": "Kohaku",
-    "producer": "COSMIC PRODUCTION",
-    "band": "Crazy:B",
+    "agency": "COSMIC PRODUCTION",
+    "unit": "Crazy:B",
     "character_voice": "Tasuku Kaito",
     "hobbies": [
       "lessons"
@@ -2062,8 +2062,8 @@
     "character_id": 74,
     "last_name": "Shiina",
     "first_name": "Niki",
-    "producer": "COSMIC PRODUCTION",
-    "band": "Crazy:B",
+    "agency": "COSMIC PRODUCTION",
+    "unit": "Crazy:B",
     "character_voice": "Tomohiro Yamaguchi",
     "hobbies": [
       "cooking",
@@ -2108,8 +2108,8 @@
     "character_id": 81,
     "first_name": "Esu",
     "last_name": "Sagiri",
-    "producer": "NEW DIMENSION",
-    "band": "Special for Princess!",
+    "agency": "NEW DIMENSION",
+    "unit": "Special for Princess!",
     "character_voice": "Shuhei Toyoshima",
     "hobbies": [
       "taking on new challenges"
@@ -2143,8 +2143,8 @@
     "character_id": 82,
     "last_name": "Taki",
     "first_name": "Ibuki",
-    "producer": "Rhythm Link",
-    "band": "AKATSUKI",
+    "agency": "Rhythm Link",
+    "unit": "AKATSUKI",
     "character_voice": "Chiaki Kobayashi",
     "hobbies": [
       "composing",
@@ -2179,8 +2179,8 @@
     "character_id": 83,
     "first_name": "Kanna",
     "last_name": "Natsu",
-    "producer":"NEW DIMENSION",
-    "band": "Special for Princess!",
+    "agency":"NEW DIMENSION",
+    "unit": "Special for Princess!",
     "character_voice": "Yuki Sakakihara",
     "hobbies": [
       "building blocks",
@@ -2214,8 +2214,8 @@
     "character_id": 84,
     "first_name": "Yume",
     "last_name": "Hanamura",
-    "producer": "NEW DIMENSION",
-    "band": "Special for Princess!",
+    "agency": "NEW DIMENSION",
+    "unit": "Special for Princess!",
     "character_voice": "Taichi Kusano",
     "hobbies": [
       "piano"
@@ -2249,8 +2249,8 @@
     "character_id": 85,
     "first_name": "Raika",
     "last_name": "Hojo",
-    "producer": "NEW DIMENSION",
-    "band": "Special for Princess!",
+    "agency": "NEW DIMENSION",
+    "unit": "Special for Princess!",
     "character_voice": "Yuuki Terui",
     "hobbies": [
       "poetry",
@@ -2279,4 +2279,5 @@
     ],
     "handedness": "Right"
   }
+
 ]

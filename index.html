@@ -326,7 +326,7 @@ function showStatsModal() {
 
     // Character icon
     icon.src = `./images/characters/${getCharacterFolder(dailyCharacter)}/icon.png`;
-    name.textContent = `${dailyCharacter.first_name} ${dailyCharacter.last_name ?? ''}`.trim();
+    name.innerHTML = `Today's character was:<br>${dailyCharacter.first_name} ${dailyCharacter.last_name ?? ''}`;
 
     // Stats
     streak.textContent = `🔥 Streak: ${getStreak()} days`;
@@ -544,8 +544,10 @@ function handleWin(isRestore = false) {
 
     gameWon = true;
     input.disabled = true;
-    dropdown.style.display = 'none';
-    input.placeholder = "You guessed correctly! 🎉";
+    dropdown.style.display = 'none'; 
+    // Updated placeholder with number of tries
+    const numGuesses = feedbackDiv.children.length;
+    input.placeholder = `You guessed correctly in ${numGuesses} ${numGuesses === 1 ? 'try' : 'tries'} 🎉`;
 
     if (!isRestore) {
         setTimeout(() => {

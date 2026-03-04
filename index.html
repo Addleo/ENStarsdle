@@ -356,6 +356,7 @@ let remainingCharacters = [];
 // -------------------------
 function getTodayDate() {
     return new Date().toISOString().slice(0,10); // YYYY-MM-DD
+    // return '2026-06-10'; // fixed date for testing
 }
 
 function getCharacterFolder(char) {
@@ -374,64 +375,49 @@ function pickDailyCharacter() {
     if (characters.length === 0) return;
     const index = Math.floor(Math.random() * characters.length);
     dailyCharacter = characters[index];
+    remainingCharacters = [...characters]; // reset for a new day
     console.log('Daily character:', dailyCharacter.first_name, dailyCharacter.last_name);
+}
+
+function dailyKey() {
+    return 'enstarsdleDaily:' + getTodayDate();
 }
 
 function saveDailyGame() {
     const data = {
-        dailyDate: getTodayDate(),
         dailyCharacter,
         guesses: Array.from(feedbackDiv.children).map(row => row.guessChar)
     };
-    localStorage.setItem('enstarsdleDaily', JSON.stringify(data));
+    localStorage.setItem(dailyKey(), JSON.stringify(data));
 }
 
-// -------------------------
-// LOAD DAILY GAME (updated)
-// -------------------------
 function loadDailyGame() {
-  const data = JSON.parse(localStorage.getItem('enstarsdleDaily') || '{}');
-  const today = getTodayDate();
+    const data = JSON.parse(localStorage.getItem(dailyKey()) || 'null');
 
-  // If old or malformed data, clear it
-  if (!data.dailyCharacter || !data.guesses) {
-    localStorage.removeItem('enstarsdleDaily');
-    return false;
-  }
+    // No saved game for today -> fresh
+    if (!data) return false;
 
-  // If saved for today, restore game
-  if (data.dailyDate === today) {
     dailyCharacter = data.dailyCharacter;
+    remainingCharacters = characters.filter(c =>
+        !data.guesses?.some(g => g.first_name === c.first_name && g.last_name === c.last_name)
+    );
+
+    renderDropdown(remainingCharacters);
 
     if (data.guesses && data.guesses.length > 0) {
-        // Restore each guess visually
-        data.guesses.forEach(guess => {
-            displayFeedback(guess);
+        data.guesses.forEach(guess => displayFeedback(guess));
 
-            // Remove restored guess from remainingCharacters
-            remainingCharacters = remainingCharacters.filter(c =>
-                c.first_name !== guess.first_name ||
-                c.last_name !== guess.last_name
-            );
-        });
-
-        renderDropdown(remainingCharacters);
-
-      // Check if the last guess was the correct character
-      const lastGuess = data.guesses[data.guesses.length - 1];
-      if (lastGuess.first_name === dailyCharacter.first_name &&
-          lastGuess.last_name === dailyCharacter.last_name) {
-        handleWin(true); // pass true so sound doesn’t replay
-      }
+        // Check if the last guess was correct
+        const lastGuess = data.guesses[data.guesses.length - 1];
+        if (lastGuess.first_name === dailyCharacter.first_name &&
+            lastGuess.last_name === dailyCharacter.last_name) {
+            handleWin(true); // restore mode
+        }
     }
 
     return true;
-  }
-
-  // If old date, clear the daily game to start fresh
-  localStorage.removeItem('enstarsdleDaily');
-  return false;
 }
+
 // -------------------------
 // STREAK / AVERAGE TRACKING
 // -------------------------
@@ -441,7 +427,7 @@ function saveStreak(wonToday) {
 
     if (streakData.lastDate === new Date(new Date(today).getTime() - 86400000).toISOString().slice(0,10) && wonToday) {
         streakData.streak = (streakData.streak || 0) + 1;
-    } else if (!streakData.lastDate || wonToday) {
+    } else if (!streakData.lastDate || !wonToday) {
         streakData.streak = 1;
     }
 
@@ -539,42 +525,33 @@ function handleGuess(guessChar) {
     }
 }
 
-// add optional parameter for restore mode
 function handleWin(isRestore = false) {
 
     gameWon = true;
     input.disabled = true;
     dropdown.style.display = 'none'; 
-    // Updated placeholder with number of tries
     const numGuesses = feedbackDiv.children.length;
     input.placeholder = `You guessed correctly in ${numGuesses} ${numGuesses === 1 ? 'try' : 'tries'} 🎉`;
 
     if (!isRestore) {
-        setTimeout(() => {
-            showStatsModal();
-        }, 5000);
-        // 🔊 Sound
+        setTimeout(() => showStatsModal(), 5000);
         document.getElementById('winSound').play();
-
-        // 🎆 Effects
         fireworks();
         starBurst();
         setTimeout(() => starBurst(), 1000);
         setTimeout(() => starBurst(), 2000);
         setTimeout(() => starBurst(), 3000);
 
-        // 🌈 Wave only on live win
         const lastGuessRow = feedbackDiv.lastElementChild;
         animateWave(lastGuessRow);
 
         saveStreak(true);
         saveAverageGuesses(feedbackDiv.children.length);
     }
+
     if (isRestore) {
         const lastGuessRow = feedbackDiv.lastElementChild;
-        if (lastGuessRow) {
-            lastGuessRow.style.boxShadow = "0 0 15px gold";
-        }
+        if (lastGuessRow) lastGuessRow.style.boxShadow = "0 0 15px gold";
         showStatsModal();
     }
 }
@@ -585,20 +562,17 @@ function handleWin(isRestore = false) {
 function displayFeedback(guessChar) {
     const guessRow = document.createElement('div');
     guessRow.className = 'guess-row';
-    guessRow.guessChar = guessChar; // save full object for restoring
+    guessRow.guessChar = guessChar;
 
     function createCell(content, correct, extraClass='') {
         const cell = document.createElement('div');
         cell.className = `guess-cell ${extraClass} ${correct ? 'correct' : 'wrong'}`;
-
-        // fancy gradient effect for correct/incorrect
         if (correct) {
             cell.style.background = 'linear-gradient(145deg, #a8e6a1, #7ed77e)';
         } else {
             cell.style.background = 'linear-gradient(145deg, #f5a8a8, #e77e7e)';
         }
         cell.style.boxShadow = 'inset 0 3px 8px rgba(255,255,255,0.2), 0 2px 5px rgba(0,0,0,0.3)';
-
         if (typeof content === 'string') cell.textContent = content;
         else cell.appendChild(content);
         return cell;
@@ -611,7 +585,6 @@ function displayFeedback(guessChar) {
     iconImg.style.height = '110%';
     iconImg.style.objectFit = 'cover';
     iconImg.onerror = () => iconImg.style.display = 'none';
-
     const iconCell = document.createElement('div');
     iconCell.className = 'guess-cell icon-cell';
     iconCell.appendChild(iconImg);
@@ -648,10 +621,8 @@ function displayFeedback(guessChar) {
     agencyImg.style.width = '90%';
     agencyImg.style.height = '90%';
     agencyImg.style.objectFit = 'contain';
-    if (guessAgency !== '?') {
-        agencyImg.src = `./images/Agencies/${guessAgency}.png`;
-        agencyImg.onerror = () => agencyImg.style.display = 'none';
-    }
+    if (guessAgency !== '?') agencyImg.src = `./images/Agencies/${guessAgency}.png`;
+    agencyImg.onerror = () => agencyImg.style.display = 'none';
     guessRow.appendChild(createCell(agencyImg, guessAgency === correctAgency));
 
     // UNIT
@@ -665,17 +636,12 @@ function displayFeedback(guessChar) {
         if (guessUnit === 'Crazy:B') unitImg.src = `./images/Units/CrazyB.png`;
         else if (guessUnit === 'Ra*bits') unitImg.src = `./images/Units/Ra'bits.png`;
         else unitImg.src = `./images/Units/${guessUnit}.png`;
-        unitImg.onerror = () => unitImg.style.display = 'none';
     }
+    unitImg.onerror = () => unitImg.style.display = 'none';
     guessRow.appendChild(createCell(unitImg, guessUnit === correctUnit, 'last-cell'));
 
     feedbackDiv.appendChild(guessRow);
 }
-
-// -------------------------
-// FIREWORKS / STARS / WAVE ANIMATION (unchanged)
-// -------------------------
-// ... include your existing fireworks(), starBurst(), animateWave() functions here ...
 
 // -------------------------
 // INITIALIZATION
@@ -697,19 +663,17 @@ fetch('characters.json')
   });
 
 // -------------------------
-// MIDNIGHT RESET
+// MIDNIGHT REFRESH (optional UX)
 // -------------------------
-function scheduleMidnightReset() {
+function scheduleMidnightRefresh() {
     const now = new Date();
     const nextMidnight = new Date();
     nextMidnight.setHours(24,0,0,0);
     const msUntilMidnight = nextMidnight - now;
-    setTimeout(() => {
-        localStorage.removeItem('enstarsdleDaily');
-        location.reload(); // refresh page for new daily
-    }, msUntilMidnight);
+
+    setTimeout(() => location.reload(), msUntilMidnight);
 }
-scheduleMidnightReset();
+scheduleMidnightRefresh();
 
 </script>
 </body>

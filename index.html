@@ -600,6 +600,29 @@ function displayFeedback(guessChar) {
     }
     guessRow.appendChild(createCell(heightText, heightCorrect));
 
+    // BIRTHDAY
+    function formatBirthday(birthday) {
+        const userLang = navigator.language || 'en-US';
+        const [month, day] = birthday.split('-').map(Number);
+        // year 2000 is arbitrary, we just need month/day
+        const dateObj = new Date(2000, month - 1, day);
+        return dateObj.toLocaleDateString(userLang, { month: '2-digit', day: '2-digit' });
+    }
+    let birthdayText = '?';
+    let birthdayCorrect = false;
+
+    if (dailyCharacter.birthday && guessChar.birthday) {
+        // convert internal MM-DD to Date object for formatting
+        const [gM, gD] = guessChar.birthday.split('-').map(Number);
+        const [aM, aD] = dailyCharacter.birthday.split('-').map(Number);
+
+        if (gM < aM || (gM === aM && gD < aD)) birthdayText = formatBirthday(guessChar.birthday) + ' <';
+        else if (gM > aM || (gM === aM && gD > aD)) birthdayText = '> ' + formatBirthday(guessChar.birthday);
+        else { birthdayText = formatBirthday(guessChar.birthday); birthdayCorrect = true; }
+    }
+
+    guessRow.appendChild(createCell(birthdayText, birthdayCorrect));
+
     // HANDEDNESS
     const handedness = guessChar.handedness ?? '?';
     guessRow.appendChild(createCell(handedness, handedness === dailyCharacter.handedness));

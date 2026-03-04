@@ -57,6 +57,40 @@ input { width: 100%; padding: 8px; box-sizing: border-box; }
 }
 .icon-cell { overflow: hidden; border-bottom-left-radius: 35px; }
 .last-cell { border-top-right-radius: 35px; }
+@keyframes waveUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); } /* height of the wave */
+}
+@keyframes rainbowBG {
+  0% { background-color: red; }
+  16% { background-color: orange; }
+  33% { background-color: yellow; }
+  50% { background-color: green; }
+  66% { background-color: blue; }
+  83% { background-color: indigo; }
+  100% { background-color: violet; }
+}
+@keyframes rainbowBorder {
+  0% { border-color: red; }
+  16% { border-color: orange; }
+  33% { border-color: yellow; }
+  50% { border-color: green; }
+  66% { border-color: blue; }
+  83% { border-color: indigo; }
+  100% { border-color: violet; }
+}
+.wave-row {
+  animation-name: rainbowBG;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1; /* rainbow lasts 5s */
+}
+.wave-cell {
+  animation-name: waveUpDown, rainbowBorder;
+  animation-duration: 1s, 4s;
+  animation-timing-function: ease-in-out, linear;
+  animation-iteration-count: 4, 1; /* wave repeats five times, rainbow lasts 5s */
+}
 .correct { background-color: #a8e6a1; } /* green */
 .wrong { background-color: #f5a8a8; }   /* red */
 .daily { margin-top: 20px; border: 1px solid #ccc; padding: 10px; display:flex; align-items:center; width:fit-content;}
@@ -65,7 +99,8 @@ button { margin-left:10px; padding:5px 10px; }
 </style>
 </head>
 <body>
-
+<audio id="winSound" src="./sounds/victory.mp3" preload="auto"></audio>
+<audio id="wrongGuessSound" src="./sounds/wrong_guess.mp3" preload="auto"></audio>
 <h1>ENStarsdle</h1>
 
 <div class="dropdown">
@@ -82,6 +117,7 @@ button { margin-left:10px; padding:5px 10px; }
   <button id="rerollBtn">Reroll</button>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script>
 // -------------------------
 // CONFIG / DATA
@@ -114,6 +150,80 @@ fetch('characters.json')
     console.error('Error loading characters.json:', err);
     dropdown.innerHTML = `<div style="color:red;">Error loading characters.json. Check console.</div>`;
   });
+
+    // ---------- FIREWORKS ----------
+    function fireworks() {
+    const duration = 5000; // shorter than 15s for game victory
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+
+    function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    const interval = setInterval(function() {
+        const timeLeft = animationEnd - Date.now();
+        if (timeLeft <= 0) return clearInterval(interval);
+
+        const particleCount = 50 * (timeLeft / duration);
+
+        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+    }, 250);
+    }
+
+    // ---------- STARS ----------
+    function starBurst() {
+    const defaults = {
+        spread: 360,
+        ticks: 50,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+        colors: ['#FFE400', '#FFBD00', '#E89400', '#FFCA6C', '#FDFFB8'],
+        zIndex: 1000
+    };
+
+    function shoot() {
+        confetti({
+        ...defaults,
+        particleCount: 40,
+        scalar: 1.2,
+        shapes: ['star']
+        });
+
+        confetti({
+        ...defaults,
+        particleCount: 10,
+        scalar: 0.75,
+        shapes: ['circle']
+        });
+    }
+
+    setTimeout(shoot, 0);
+    setTimeout(shoot, 100);
+    setTimeout(shoot, 200);
+    }
+
+    // ---------- WAVE ANIMATION ----------
+    function animateWave(guessRow) {
+    // Apply row background rainbow
+    guessRow.classList.add('wave-row');
+
+    const cells = Array.from(guessRow.children);
+
+    cells.forEach((cell, i) => {
+        setTimeout(() => {
+        cell.classList.add('wave-cell');
+
+        // Remove cell animation after 5s so it can be reused
+        setTimeout(() => cell.classList.remove('wave-cell'), 5000);
+        }, i * 150); // delay each cell for ripple
+    });
+
+    // Remove row rainbow after 5s
+    setTimeout(() => guessRow.classList.remove('wave-row'), 5000);
+    }
 
 // -------------------------
 // PICK DAILY CHARACTER
@@ -211,20 +321,30 @@ function handleGuess(guessChar) {
     guessChar.last_name === dailyCharacter.last_name
   ) {
     handleWin();
+  } else {
+    // Play wrong guess sound
+    document.getElementById('wrongGuessSound').play();
   }
 }
 
 function handleWin() {
   gameWon = true;
-
-  // Disable input
+  document.getElementById('winSound').play();
   input.disabled = true;
   dropdown.style.display = 'none';
-
-  // Optional: change placeholder text
   input.placeholder = "You guessed correctly! 🎉";
-
   console.log("You win!");
+
+  // 🎆 CONFETTI / FIREWORKS
+  fireworks();
+  starBurst();
+  setTimeout(() => starBurst(), 1000);
+  setTimeout(() => starBurst(), 2000);
+  setTimeout(() => starBurst(), 3000);
+
+  // Animate the last guess row
+  const lastGuessRow = feedbackDiv.lastElementChild;
+  animateWave(lastGuessRow);
 }
 
 // -------------------------

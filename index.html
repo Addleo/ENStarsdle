@@ -356,7 +356,7 @@ let remainingCharacters = [];
 // -------------------------
 function getTodayDate() {
     return new Date().toISOString().slice(0,10); // YYYY-MM-DD
-    // return '2026-06-10'; // fixed date for testing
+    // return '2026-03-08'; // fixed date for testing
 }
 
 function getCharacterFolder(char) {
@@ -422,16 +422,36 @@ function loadDailyGame() {
 // STREAK / AVERAGE TRACKING
 // -------------------------
 function saveStreak(wonToday) {
-    const today = getTodayDate();
+    if (!wonToday) return; // no streak increase if they didn't win today
+
+    const today = getTodayDate(); // YYYY-MM-DD
     let streakData = JSON.parse(localStorage.getItem('enstarsdleStreak') || '{}');
 
-    if (streakData.lastDate === new Date(new Date(today).getTime() - 86400000).toISOString().slice(0,10) && wonToday) {
-        streakData.streak = (streakData.streak || 0) + 1;
-    } else if (!streakData.lastDate || !wonToday) {
+    const lastDate = streakData.lastDate || null;
+    const lastStreak = streakData.streak || 0;
+
+    if (lastDate) {
+        // calculate difference in days
+        const last = new Date(lastDate);
+        const curr = new Date(today);
+        const diffDays = Math.floor((curr - last) / (1000 * 60 * 60 * 24));
+
+        if (diffDays === 1) {
+            // consecutive day → increment streak
+            streakData.streak = lastStreak + 1;
+        } else if (diffDays > 1) {
+            // missed one or more days → reset streak
+            streakData.streak = 1;
+        } else if (diffDays === 0) {
+            // already counted today → do nothing
+            streakData.streak = lastStreak;
+        }
+    } else {
+        // first win ever
         streakData.streak = 1;
     }
 
-    if (wonToday) streakData.lastDate = today;
+    streakData.lastDate = today;
     localStorage.setItem('enstarsdleStreak', JSON.stringify(streakData));
 }
 

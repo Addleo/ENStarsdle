@@ -376,7 +376,6 @@ function pickDailyCharacter() {
     const index = Math.floor(Math.random() * characters.length);
     dailyCharacter = characters[index];
     remainingCharacters = [...characters]; // reset for a new day
-    console.log('Daily character:', dailyCharacter.first_name, dailyCharacter.last_name);
 }
 
 function dailyKey() {

@@ -41,7 +41,7 @@ input:focus {
     border-color: #FFDD55;
     box-shadow: 0 0 15px rgba(255, 221, 85, 0.7);
     border-radius: 12px 12px 0 0; /* only top corners rounded */
-    border-bottom: none; /* remove bottom border if needed for perfect visual merge */
+    border-bottom-color: transparent; /* remove bottom border if needed for perfect visual merge */
 }
 input::placeholder {
     font-family: 'Fredoka One', cursive;
@@ -51,7 +51,7 @@ input::placeholder {
 .dropdown-content {
     display: none; /* hide by default */
     position: absolute;
-    top: 100%;
+    top: 98%; /* slight overlap with input border */
     left: 0;
     width: 100%;
     border-radius: 0 0 12px 12px;

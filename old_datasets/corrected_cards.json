@@ -1,0 +1,2325 @@
+[
+    {
+        "cgName": "Silent Gentleman",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Silent Gentleman.png"
+    },
+    {
+        "cgName": "Silent Gentleman (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Silent Gentleman Bloomed.png"
+    },
+    {
+        "cgName": "Match for Victory",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Match for Victory.png"
+    },
+    {
+        "cgName": "Match for Victory (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Match for Victory Bloomed.png"
+    },
+    {
+        "cgName": "Gentleness of Rhythm Link",
+        "characters": [
+            "Adonis Otogari",
+            "Koga Ogami",
+            "Kaoru Hakaze",
+            "Rei Sakuma",
+            "Keito Hasumi",
+            "Kuro Kiryu",
+            "Souma Kanzaki",
+            "Tomoya Mashiro",
+            "Nazuna Nito",
+            "Mitsuru Tenma",
+            "Hajime Shino"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Gentleness of Rhythm Link.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "The Gentleness of Strength",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/The Gentleness of Strength.png"
+    },
+    {
+        "cgName": "The Gentleness of Strength (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/The Gentleness of Strength Bloomed.png"
+    },
+    {
+        "cgName": "Rejoicing at the Harvest",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Rejoicing at the Harvest.png"
+    },
+    {
+        "cgName": "Rejoicing at the Harvest (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Rejoicing at the Harvest Bloomed.png"
+    },
+    {
+        "cgName": "Resonating Rock",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Resonating Rock.png"
+    },
+    {
+        "cgName": "Moon and Memory",
+        "characters": [
+            "Adonis Otogari",
+            "Nazuna Nito"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Moon and Memory.png"
+    },
+    {
+        "cgName": "Moon and Memory (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Moon and Memory bloomed.png"
+    },
+    {
+        "cgName": "Clad in Homeland Wind",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Clad in Homeland Wind.png"
+    },
+    {
+        "cgName": "Clad in Homeland Wind (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Clad in Homeland Wind Bloomed.png"
+    },
+    {
+        "cgName": "Beast and Diplomat",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Beast and Diplomat.png"
+    },
+    {
+        "cgName": "Beast and Diplomat (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Beast and Diplomat Bloomed.png"
+    },
+    {
+        "cgName": "Gentle Bridal Light",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Gentle Bridal Light.png"
+    },
+    {
+        "cgName": "Gentle Bridal Light (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Gentle Bridal Light Bloomed.png"
+    },
+    {
+        "cgName": "Tanabata Looking into the Sky",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Tanabata Looking into the Sky.png"
+    },
+    {
+        "cgName": "Tanabata Looking into the Sky (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Tanabata Looking into the Sky bloomed.png"
+    },
+    {
+        "cgName": "Flame of Intrepidity",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Flame of Intrepidity.png"
+    },
+    {
+        "cgName": "Flame of Intrepidity (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Flame of Intrepidity bloomed.png"
+    },
+    {
+        "cgName": "Fruition and Surprise",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Fruition and Surprise.png"
+    },
+    {
+        "cgName": "Doll & Memories",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Doll & Memories.png"
+    },
+    {
+        "cgName": "Doll & Memories (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Doll & Memories bloomed.png"
+    },
+    {
+        "cgName": "Tasty and Healthy",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Tasty and Healthy.png"
+    },
+    {
+        "cgName": "Tasty and Healthy (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Tasty and Healthy bloomed.png"
+    },
+    {
+        "cgName": "Joyous Stage",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Joyous Stage.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Dream Burning Inside",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Dream Burning Inside.png"
+    },
+    {
+        "cgName": "Dream Burning Inside (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Dream Burning Inside bloomed.png"
+    },
+    {
+        "cgName": "Determined Stand-in",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Determined Stand-in.png"
+    },
+    {
+        "cgName": "Determined Stand-in (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Determined Stand-in bloomed.png"
+    },
+    {
+        "cgName": "Demon's Soothing Song",
+        "characters": [
+            "Adonis Otogari",
+            "Koga Ogami",
+            "Kaoru Hakaze",
+            "Rei Sakuma"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Demon's Soothing Song.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "Blooming Plum Blossoms",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Blooming Plum Blossoms.png"
+    },
+    {
+        "cgName": "Blooming Plum Blossoms (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Blooming Plum Blossoms bloomed.png"
+    },
+    {
+        "cgName": "A NIGHT for Holding Hands",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/A NIGHT for Holding Hands.png"
+    },
+    {
+        "cgName": "A NIGHT for Holding Hands (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/A NIGHT for Holding Hands bloomed.png"
+    },
+    {
+        "cgName": "Peaceful FLARE",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Peaceful FLARE.png"
+    },
+    {
+        "cgName": "Seeker's Willpower",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Seeker's Willpower.png"
+    },
+    {
+        "cgName": "Seeker's Willpower (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Seeker's Willpower bloomed.png"
+    },
+    {
+        "cgName": "Spirit in Everything",
+        "characters": [
+            "Adonis Otogari",
+            "Makoto Yuuki",
+            "Koga Ogami",
+            "Tsukasa Suou"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Spirit in Everything.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Spirit in Everything (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/Spirit in Everything bloomed.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "ACE's Position",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/ACE's Position.png"
+    },
+    {
+        "cgName": "ACE's Position (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/ACE's Position bloomed.png"
+    },
+    {
+        "cgName": "A Song Of My Gratitude",
+        "characters": [
+            "Adonis Otogari",
+            "Koga Ogami",
+            "Kaoru Hakaze",
+            "Rei Sakuma"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/A Song Of My Gratitude.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "What Surrounds Dreams",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/What Surrounds Dreams.png"
+    },
+    {
+        "cgName": "What Surrounds Dreams (Bloomed)",
+        "characters": [
+            "Adonis Otogari"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Adonis_Otogari/CGs/What Surrounds Dreams bloomed.png"
+    },
+    {
+        "cgName": "Fledgling of STAR PRO",
+        "characters": [
+            "Aira Shiratori",
+            "Makoto Yuuki",
+            "Subaru Akehoshi",
+            "Kanata Shinkai",
+            "Shinobu Sengoku",
+            "Mao Isara",
+            "Hokuto Hidaka",
+            "Tetora Nagumo",
+            "Chiaki Morisawa",
+            "Midori Takamine",
+            "Mayoi Ayase",
+            "Tatsumi Kazehaya",
+            "Hiiro Amagi",
+            "Yuzuru Fushimi",
+            "Eichi Tenshouin",
+            "Wataru Hibiki",
+            "Tori Himemiya"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Fledgling of STAR PRO.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "Idol Maniac",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Idol Maniac.png"
+    },
+    {
+        "cgName": "Idol Maniac (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Idol Maniac bloomed.png"
+    },
+    {
+        "cgName": "Napping Serval",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Napping Serval.png"
+    },
+    {
+        "cgName": "Napping Serval (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Napping Serval bloomed.png"
+    },
+    {
+        "cgName": "Within Touching Distance",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Within Touching Distance.png"
+    },
+    {
+        "cgName": "Within Touching Distance (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Within Touching Distance bloomed.png"
+    },
+    {
+        "cgName": "Azure Crystal",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Azure Crystal.png"
+    },
+    {
+        "cgName": "Azure Crystal (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Azure Crystal bloomed.png"
+    },
+    {
+        "cgName": "Leisure Day Unwound",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Leisure Day Unwound.png"
+    },
+    {
+        "cgName": "Leisure Day Unwound (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Leisure Day Unwound bloomed.png"
+    },
+    {
+        "cgName": "Rock in My Way",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Rock in My Way.png"
+    },
+    {
+        "cgName": "Budding Loveliness",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Budding Loveliness.png"
+    },
+    {
+        "cgName": "Budding Loveliness (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Budding Loveliness bloomed.png"
+    },
+    {
+        "cgName": "Sun of White Light",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Sun of White Light.png"
+    },
+    {
+        "cgName": "Sun of White Light (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Sun of White Light bloomed.png"
+    },
+    {
+        "cgName": "Phantom Airship of Dreams",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Phantom Airship of Dreams.png"
+    },
+    {
+        "cgName": "Phantom Airship of Dreams (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Phantom Airship of Dreams bloomed.png"
+    },
+    {
+        "cgName": "LOVE and Surprise",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/LOVE and Surprise.png"
+    },
+    {
+        "cgName": "Studying Time",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Studying Time.png"
+    },
+    {
+        "cgName": "Studying Time (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Studying Time bloomed.png"
+    },
+    {
+        "cgName": "Confusing Sports Fes",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Confusing Sports Fes.png"
+    },
+    {
+        "cgName": "Confusing Sports Fes (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Confusing Sports Fes bloomed.png"
+    },
+    {
+        "cgName": "Unlucky Bunny",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Unlucky Bunny.png"
+    },
+    {
+        "cgName": "Unlucky Bunny (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Unlucky Bunny bloomed.png"
+    },
+    {
+        "cgName": "Path to Spreading Love",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Path to Spreading Love.png"
+    },
+    {
+        "cgName": "Path to Spreading Love (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Path to Spreading Love bloomed.png"
+    },
+    {
+        "cgName": "Rethinking Private Time",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Rethinking Private Time.png"
+    },
+    {
+        "cgName": "Rethinking Private Time (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Rethinking Private Time bloomed.png"
+    },
+    {
+        "cgName": "The Loving Soldier",
+        "characters": [
+            "Aira Shiratori",
+            "Hiiro Amagi",
+            "Mayoi Ayase",
+            "Tatsumi Kazehaya"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/The Loving Soldier.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "A Star That Connects",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/A Star That Connects.png"
+    },
+    {
+        "cgName": "A Star That Connects (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/A Star That Connects bloomed.png"
+    },
+    {
+        "cgName": "Love Sparkle",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Love Sparkle.png"
+    },
+    {
+        "cgName": "Love Sparkle (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Love Sparkle bloomed.png"
+    },
+    {
+        "cgName": "Crashing TORRENT",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Crashing TORRENT.png"
+    },
+    {
+        "cgName": "Amenable Egoist",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Amenable Egoist.png"
+    },
+    {
+        "cgName": "Amenable Egoist (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Amenable Egoist bloomed.png"
+    },
+    {
+        "cgName": "Path to Becoming an ACE",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Path to Becoming an ACE.png"
+    },
+    {
+        "cgName": "Path to Becoming an ACE (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Path to Becoming an ACE bloomed.png"
+    },
+    {
+        "cgName": "Exquisite Performer",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Exquisite Performer.png"
+    },
+    {
+        "cgName": "Exquisite Performer (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Exquisite Performer bloomed.png"
+    },
+    {
+        "cgName": "Gratitude and Overflowing LOVE",
+        "characters": [
+            "Aira Shiratori",
+            "Hiiro Amagi",
+            "Mayoi Ayase",
+            "Tatsumi Kazehaya"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Gratitude and Overflowing LOVE.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "Love Sign",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Love Sign.png",
+        "specialTag": "CN/KR Exclusive"
+    },
+    {
+        "cgName": "Love Sign (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Love Sign bloomed.png",
+        "specialTag": "CN/KR Exclusive"
+    },
+    {
+        "cgName": "Game START",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Game START.png"
+    },
+    {
+        "cgName": "Game START (Bloomed)",
+        "characters": [
+            "Aira Shiratori"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Aira_Shiratori/CGs/Game START bloomed.png"
+    },
+    {
+        "cgName": "In Pursuit of Beauty",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/In Pursuit of Beauty.png"
+    },
+    {
+        "cgName": "In Pursuit of Beauty (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/In Pursuit of Beauty bloomed.png"
+    },
+    {
+        "cgName": "Guiding Hansel",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Guiding Hansel.png"
+    },
+    {
+        "cgName": "Guiding Hansel (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Guiding Hansel bloomed.png"
+    },
+    {
+        "cgName": "My Best Self",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/My Best Self.png"
+    },
+    {
+        "cgName": "My Best Self (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/My Best Self bloomed.png"
+    },
+    {
+        "cgName": "Confidant of NEW DI",
+        "characters": [
+            "Arashi Narukami",
+            "Madara Mikejima",
+            "Tsukasa Suou",
+            "Leo Tsukinaga",
+            "Izumi Sena",
+            "Ritsu Sakuma",
+            "Natsume Sakasaki",
+            "Tsumugi Aoba",
+            "Sora Harukawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Confidant of NEW DI.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "Dream of Harmony",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Dream of Harmony.png"
+    },
+    {
+        "cgName": "Dream of Harmony (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Dream of Harmony bloomed.png"
+    },
+    {
+        "cgName": "Glitter Dappled Sunlight",
+        "characters": [
+            "Arashi Narukami",
+            "Tori Himemiya"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Glitter Dappled Sunlight.png"
+    },
+    {
+        "cgName": "Glitter Dappled Sunlight (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Glitter Dappled Sunlight bloomed.png"
+    },
+    {
+        "cgName": "Elegant Fragrance",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Elegant Fragrance.png"
+    },
+    {
+        "cgName": "Elegant Fragrance (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Elegant Fragrance bloomed.png"
+    },
+    {
+        "cgName": "The Fan of Getto",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/The Fan of Getto.png"
+    },
+    {
+        "cgName": "The Fan of Getto (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/The Fan of Getto bloomed.png"
+    },
+    {
+        "cgName": "Stunning Rock",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Stunning Rock.png"
+    },
+    {
+        "cgName": "Hobby Time",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Hobby Time.png"
+    },
+    {
+        "cgName": "Hobby Time (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Hobby Time bloomed.png"
+    },
+    {
+        "cgName": "Joy and Surprise",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Joy and Surprise.png"
+    },
+    {
+        "cgName": "Tanabata Praying to the Sky",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Tanabata Praying to the Sky.png"
+    },
+    {
+        "cgName": "Tanabata Praying to the Sky (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Tanabata Praying to the Sky bloomed.png"
+    },
+    {
+        "cgName": "Reversed Fairy Tales",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Reversed Fairy Tales.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Reversed Fairy Tales (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Reversed Fairy Tales bloomed.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Fleeting PORTRAIT",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Fleeting PORTRAIT.png"
+    },
+    {
+        "cgName": "Fleeting PORTRAIT (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Fleeting PORTRAIT bloomed.png"
+    },
+    {
+        "cgName": "Alluring Fragrant Blossom",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Alluring Fragrant Blossom.png"
+    },
+    {
+        "cgName": "Alluring Fragrant Blossom (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Alluring Fragrant Blossom bloomed.png"
+    },
+    {
+        "cgName": "Vision Adorning Memories",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Vision Adorning Memories.png"
+    },
+    {
+        "cgName": "Vision Adorning Memories (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Vision Adorning Memories bloomed.png"
+    },
+    {
+        "cgName": "Lemon-Flavored Detour",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Lemon-Flavored Detour.png"
+    },
+    {
+        "cgName": "Lemon-Flavored Detour (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Lemon-Flavored Detour bloomed.png"
+    },
+    {
+        "cgName": "Made Mood",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Made Mood.png"
+    },
+    {
+        "cgName": "Made Mood (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Made Mood bloomed.png"
+    },
+    {
+        "cgName": "Graceful Crown",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Graceful Crown.png"
+    },
+    {
+        "cgName": "Graceful Crown (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Graceful Crown bloomed.png"
+    },
+    {
+        "cgName": "Polished Sword",
+        "characters": [
+            "Arashi Narukami",
+            "Ritsu Sakuma",
+            "Izumi Sena",
+            "Leo Tsukinaga",
+            "Tsukasa Suou"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Polished Sword.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "Moonlit Lavender",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Moonlit Lavender.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Moonlit Lavender (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Moonlit Lavender bloomed.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "consideration @home",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/consideration @home.png"
+    },
+    {
+        "cgName": "consideration @home (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/consideration @home bloomed.png"
+    },
+    {
+        "cgName": "Relentless SPARK",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Relentless SPARK.png"
+    },
+    {
+        "cgName": "Love Collector",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Love Collector.png"
+    },
+    {
+        "cgName": "Love Collector (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Love Collector bloomed.png"
+    },
+    {
+        "cgName": "Gratitude Means Being With You",
+        "characters": [
+            "Arashi Narukami",
+            "Ritsu Sakuma",
+            "Izumi Sena",
+            "Leo Tsukinaga",
+            "Tsukasa Suou"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Gratitude Means Being With You.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "Grace of All Trades",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Grace of All Trades.png"
+    },
+    {
+        "cgName": "Grace of All Trades (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Grace of All Trades bloomed.png"
+    },
+    {
+        "cgName": "Search Witch",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Search Witch.png"
+    },
+    {
+        "cgName": "Search Witch (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Search Witch bloomed.png"
+    },
+    {
+        "cgName": "Stage Model",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Stage Model.png"
+    },
+    {
+        "cgName": "Stage Model (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Stage Model bloomed.png"
+    },
+    {
+        "cgName": "Bonds That Collect Possibilities",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Bonds That Collect Possibilities.png"
+    },
+    {
+        "cgName": "Bonds That Collect Possibilities (Bloomed)",
+        "characters": [
+            "Arashi Narukami"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Arashi_Narukami/CGs/Bonds That Collect Possibilities bloomed.png"
+    },
+    {
+        "cgName": "Leader of Justice",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Leader of Justice.png"
+    },
+    {
+        "cgName": "Leader of Justice (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Leader of Justice bloomed.png"
+    },
+    {
+        "cgName": "Active AtoZ",
+        "characters": [
+            "Chiaki Morisawa",
+            "Kaoru Hakaze"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Active AtoZ.png"
+    },
+    {
+        "cgName": "Active AtoZ (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Active AtoZ bloomed.png"
+    },
+    {
+        "cgName": "What Makes A Hero",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/What Makes A Hero.png"
+    },
+    {
+        "cgName": "What Makes A Hero (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/What Makes A Hero bloomed.png"
+    },
+    {
+        "cgName": "Meteor with Red Resolve",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Meteor with Red Resolve.png"
+    },
+    {
+        "cgName": "Meteor with Red Resolve (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Meteor with Red Resolve bloomed.png"
+    },
+    {
+        "cgName": "The Leaping Light",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/The Leaping Light.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "The Leaping Light (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/The Leaping Light bloomed.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Submarine and Distance",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Submarine and Distance.png"
+    },
+    {
+        "cgName": "Submarine and Distance (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Submarine and Distance bloomed.png"
+    },
+    {
+        "cgName": "The Beam of Hope",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/The Beam of Hope.png"
+    },
+    {
+        "cgName": "The Beam of Hope (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/The Beam of Hope bloomed.png"
+    },
+    {
+        "cgName": "Burning Rock",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Burning Rock.png"
+    },
+    {
+        "cgName": "Astraea of Transformation",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Astraea of Transformation.png"
+    },
+    {
+        "cgName": "Passion and Surprise (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Passion and Surprise bloomed.png"
+    },
+    {
+        "cgName": "Blazing Summer",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Blazing Summer.png"
+    },
+    {
+        "cgName": "Blazing Summer (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Blazing Summer.png"
+    },
+    {
+        "cgName": "Substitute Caregiver",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Substitute Caregiver.png"
+    },
+    {
+        "cgName": "Substitute Caregiver (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Substitute Caregiver bloomed.png"
+    },
+    {
+        "cgName": "Heroes and Courage",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Heroes and Courage.png",
+        "specialTag": "KR Exclusive"
+    },
+    {
+        "cgName": "Unlimited Unity",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Unlimited Unity.png"
+    },
+    {
+        "cgName": "Unlimited Unity (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Unlimited Unity bloomed.png"
+    },
+    {
+        "cgName": "Exciting Groom Trip",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Exciting Groom Trip.png"
+    },
+    {
+        "cgName": "Exciting Groom Trip (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Exciting Groom Trip bloomed.png"
+    },
+    {
+        "cgName": "Survivor with a Suggestion",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Survivor with a Suggestion.png"
+    },
+    {
+        "cgName": "Survivor with a Suggestion (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Survivor with a Suggestion bloomed.png"
+    },
+    {
+        "cgName": "Kaleidoscope Heart",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Kaleidoscope Heart.png"
+    },
+    {
+        "cgName": "Kaleidoscope Heart (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Kaleidoscope Heart bloomed.png"
+    },
+    {
+        "cgName": "Wishing-Sea Stella",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Wishing-Sea Stella.png"
+    },
+    {
+        "cgName": "Wishing-Sea Stella (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Wishing-Sea Stella bloomed.png"
+    },
+    {
+        "cgName": "Blazing Meteor",
+        "characters": [
+            "Chiaki Morisawa",
+            "Kanata Shinkai",
+            "Shinobu Sengoku",
+            "Midori Takamine",
+            "Tetora Nagumo"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Blazing Meteor.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "Gourmet District of Passion",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Gourmet District of Passion.png"
+    },
+    {
+        "cgName": "Gourmet District of Passion (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Gourmet District of Passion bloomed.png"
+    },
+    {
+        "cgName": "Burning FLARE",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Burning FLARE.png"
+    },
+    {
+        "cgName": "Unreal Riddle",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Unreal Riddle.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Unreal Riddle (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Unreal Riddle bloomed.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Enthusiastic VANQUISH",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Enthusiastic VANQUISH.png"
+    },
+    {
+        "cgName": "Enthusiastic VANQUISH (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Enthusiastic VANQUISH bloomed.png"
+    },
+    {
+        "cgName": "Sun-chasing Star",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Sun-chasing Star.png"
+    },
+    {
+        "cgName": "Sun-chasing Star (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Sun-chasing Star bloomed.png"
+    },
+    {
+        "cgName": "Offense-Defense Ambivalence",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Offense-Defense Ambivalence.png"
+    },
+    {
+        "cgName": "Offense-Defense Ambivalence (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Offense-Defense Ambivalence bloomed.png"
+    },
+    {
+        "cgName": "Promoting Sailing Ceremony",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Promoting Sailing Ceremony.png"
+    },
+    {
+        "cgName": "Promoting Sailing Ceremony (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Promoting Sailing Ceremony bloomed.png"
+    },
+    {
+        "cgName": "Reach Witch",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Reach Witch.png"
+    },
+    {
+        "cgName": "Reach Witch (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Reach Witch bloomed.png"
+    },
+    {
+        "cgName": "Light Up the Light of Justice",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Light Up the Light of Justice.png"
+    },
+    {
+        "cgName": "Light Up the Light of Justice (Bloomed)",
+        "characters": [
+            "Chiaki Morisawa"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Light Up the Light of Justice bloomed.png"
+    },
+    {
+        "cgName": "Heart Burning With Gratitude",
+        "characters": [
+            "Chiaki Morisawa",
+            "Kanata Shinkai",
+            "Shinobu Sengoku",
+            "Midori Takamine",
+            "Tetora Nagumo"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Chiaki_Morisawa/CGs/Heart Burning With Gratitude.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "Leader of Heaven",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Leader of Heaven.png"
+    },
+    {
+        "cgName": "Leader of Heaven (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Leader of Heaven bloomed.png"
+    },
+    {
+        "cgName": "Tranquil Spring Days",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Tranquil Spring Days.png"
+    },
+    {
+        "cgName": "Tranquil Spring Days (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin",
+            "Wataru Hibiki"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Tranquil Spring Days bloomed.png"
+    },
+    {
+        "cgName": "The Daring Spy",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/The Daring Spy.png"
+    },
+    {
+        "cgName": "The Daring Spy (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/The Daring Spy bloomed.png"
+    },
+    {
+        "cgName": "Ring of Smile",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Ring of Smile.png"
+    },
+    {
+        "cgName": "New Blend Release",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/New Blend Release.png"
+    },
+    {
+        "cgName": "New Blend Release (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/New Blend Release bloomed.png"
+    },
+    {
+        "cgName": "Spring Breeze",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Spring Breeze.png"
+    },
+    {
+        "cgName": "Spring Breeze (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Spring Breeze bloomed.png"
+    },
+    {
+        "cgName": "Rock on the Front Line",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Rock on the Front Line.png"
+    },
+    {
+        "cgName": "The Blessed Bouquet",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/The Blessed Bouquet.png"
+    },
+    {
+        "cgName": "The Blessed Bouquet (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/The Blessed Bouquet bloomed.png"
+    },
+    {
+        "cgName": "Dawn's Resounding Red",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Dawn's Resounding Red.png"
+    },
+    {
+        "cgName": "Dawn's Resounding Red (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin",
+            "Nagisa Ran"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Dawn's Resounding Red bloomed.png"
+    },
+    {
+        "cgName": "Flourishing Splendor",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Flourishing Splendor.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Flourishing Splendor (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Flourishing Splendor bloomed.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Blazing Star of Hope",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Blazing Star of Hope.png"
+    },
+    {
+        "cgName": "Blazing Star of Hope (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Blazing Star of Hope bloomed.png"
+    },
+    {
+        "cgName": "Blazing Memories",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Blazing Memories.png"
+    },
+    {
+        "cgName": "Blazing Memories (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Blazing Memories bloomed.png"
+    },
+    {
+        "cgName": "Delight and Surprise",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Delight and Surprise.png"
+    },
+    {
+        "cgName": "Late Night Work",
+        "characters": [
+            "Eichi Tenshouin",
+            "Keito Hasumi"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Late Night Work.png"
+    },
+    {
+        "cgName": "Late Night Work (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Late Night Work bloomed.png"
+    },
+    {
+        "cgName": "Waltz's Intention",
+        "characters": [
+            "Eichi Tenshouin",
+            "Adonis Otogari"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Waltz's Intention.png"
+    },
+    {
+        "cgName": "Waltz's Intention (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Waltz's Intention bloomed.png"
+    },
+    {
+        "cgName": "Origin of the Story",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Origin of the Story.png"
+    },
+    {
+        "cgName": "Origin of the Story (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Origin of the Story bloomed.png"
+    },
+    {
+        "cgName": "Nocturne of Elegance",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Nocturne of Elegance.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Nocturne of Elegance (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Nocturne of Elegance bloomed.png",
+        "specialTag": "Global Exclusive"
+    },
+    {
+        "cgName": "Grace of Angels",
+        "characters": [
+            "Eichi Tenshouin",
+            "Wataru Hibiki",
+            "Tori Himemiya",
+            "Yuzuru Fushimi"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Grace of Angels.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "A Frolic to Blaze the Night",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/A Frolic to Blaze the Night.png"
+    },
+    {
+        "cgName": "A Frolic to Blaze the Night (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/A Frolic to Blaze the Night bloomed.png"
+    },
+    {
+        "cgName": "Fighting Dragon",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Fighting Dragon.png"
+    },
+    {
+        "cgName": "Fighting Dragon (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Fighting Dragon bloomed.png"
+    },
+    {
+        "cgName": "Happy Balloon",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Happy Balloon.png"
+    },
+    {
+        "cgName": "Happy Balloon (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Happy Balloon bloomed.png"
+    },
+    {
+        "cgName": "Fairy Tale of Allegories",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Fairy Tale of Allegories.png"
+    },
+    {
+        "cgName": "Fairy Tale of Allegories (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Fairy Tale of Allegories bloomed.png"
+    },
+    {
+        "cgName": "Ideal SPARK",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Ideal SPARK.png"
+    },
+    {
+        "cgName": "Fairy's Amusement",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Fairy's Amusement.png"
+    },
+    {
+        "cgName": "Fairy's Amusement (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Fairy's Amusement bloomed.png"
+    },
+    {
+        "cgName": "Gratitude Accumulated Over Time",
+        "characters": [
+            "Eichi Tenshouin",
+            "Wataru Hibiki",
+            "Tori Himemiya",
+            "Yuzuru Fushimi"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Gratitude Accumulated Over Time.png",
+        "specialTag": "Group CG"
+    },
+    {
+        "cgName": "Delicious Playfulness",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Delicious Playfulness.png"
+    },
+    {
+        "cgName": "Delicious Playfulness (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Delicious Playfulness bloomed.png"
+    },
+    {
+        "cgName": "Delicious Playfulness",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Delicious Playfulness.png"
+    },
+    {
+        "cgName": "Delicious Playfulness (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "4",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Delicious Playfulness bloomed.png"
+    },
+    {
+        "cgName": "Bonds That Change Reality",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": false,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Bonds That Change Reality.png"
+    },
+    {
+        "cgName": "Bonds That Change Reality (Bloomed)",
+        "characters": [
+            "Eichi Tenshouin"
+        ],
+        "bloomed": true,
+        "rarity": "5",
+        "imagePath": "./images/characters/Eichi_Tenshouin/CGs/Bonds That Change Reality bloomed.png"
+    }
+]

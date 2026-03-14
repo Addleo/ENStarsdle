@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ENStarsdle</title>
+<link rel="icon" href="./images/icon.png" type="image/png">
+<style>
+/* ---------- FONT ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;500&display=swap');
+body { font-family: sans-serif; padding: 20px; background: url('./images/background.png') no-repeat center center fixed; background-size: cover; display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);}
+/* Header font */
+/* Header font */
+h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #FFD700; /* gold-ish for ENStars vibe */
+    text-shadow: 0 0 10px #FFAA00, 0 0 20px #FFDD55;
+}
+.dropdown { position: relative; display: inline-block; }
+input {
+    width: 600px;
+    padding: 12px 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    outline: none;
+    transition: 0.3s all;
+    background-color: rgba(20, 20, 20, 0.95);
+    color: #fff;
+    box-sizing: border-box;
+}
+input:focus {
+    border-color: #FFDD55;
+    box-shadow: 0 0 15px rgba(255, 221, 85, 0.7);
+    border-radius: 12px 12px 0 0; /* only top corners rounded */
+    border-bottom-color: transparent; /* remove bottom border if needed for perfect visual merge */
+}
+input::placeholder {
+    font-family: 'Fredoka One', cursive;
+    color: rgba(255, 255, 255, 0.7); /* optional, lighter than input text */
+    font-weight: 400;
+}
+.dropdown-content {
+    display: none; /* hide by default */
+    position: absolute;
+    top: 98%; /* slight overlap with input border */
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    border: 2px solid #FFD700;
+    border-top: none; /* remove top border to visually connect with input */
+    max-height: 350px;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    background-color: rgba(20, 20, 20, 0.95);
+    z-index: 1000;
+    scrollbar-width: none; /* Firefox */
+    box-sizing: border-box;
+}
+.dropdown-content::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
+}
+.dropdown-content div {
+    font-family: 'Fredoka One', cursive; /* matches header font */
+    padding: 12px 15px;
+    font-size: 17px;
+    min-height: 50px; /* taller items */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    transition: 0.2s all;
+}
+.dropdown-content div:hover {
+    background: linear-gradient(90deg, #FFD700, #FFDD55);
+    color: #000;
+    transform: scale(1.03);
+}
+.dropdown-content img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.feedback { margin-top: 20px; display: flex; flex-direction: column-reverse;}
+.feedback div { text-align: center; border: 1px solid black; }
+.feedback img { display: block; margin: 0 auto; }
+.guess-row {
+  display: flex;
+  width: fit-content;
+  margin-bottom: 10px;
+  background: black;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.guess-cell {
+  border: 1px solid black;
+  width: 120px;          /* uniform width */
+  height: 120px;          /* uniform height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Fredoka One', cursive;
+}
+.icon-cell { overflow: hidden; border-bottom-left-radius: 35px; }
+.last-cell { border-top-right-radius: 35px; }
+@keyframes waveUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); } /* height of the wave */
+}
+@keyframes rainbowBG {
+  0% { background-color: red; }
+  16% { background-color: orange; }
+  33% { background-color: yellow; }
+  50% { background-color: green; }
+  66% { background-color: blue; }
+  83% { background-color: indigo; }
+  100% { background-color: violet; }
+}
+@keyframes rainbowBorder {
+  0% { border-color: red; }
+  16% { border-color: orange; }
+  33% { border-color: yellow; }
+  50% { border-color: green; }
+  66% { border-color: blue; }
+  83% { border-color: indigo; }
+  100% { border-color: violet; }
+}
+.wave-row {
+  animation-name: rainbowBG;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1; /* rainbow lasts 5s */
+}
+.wave-cell {
+  animation-name: waveUpDown, rainbowBorder;
+  animation-duration: 1s, 4s;
+  animation-timing-function: ease-in-out, linear;
+  animation-iteration-count: 4, 1; /* wave repeats five times, rainbow lasts 5s */
+}
+.correct {
+  background: linear-gradient(145deg, #a8e6a1, #6fd68a);
+  border: 1px solid #50b870;
+  box-shadow: 0 4px 8px rgba(108, 203, 123, 0.6);
+}
+.wrong {
+  background: linear-gradient(145deg, #f5a8a8, #e07d7d);
+  border: 1px solid #d43f3f;
+  box-shadow: 0 4px 8px rgba(245, 168, 168, 0.6);
+}
+.daily { margin-top: 20px; border: 1px solid #ccc; padding: 10px; display:flex; align-items:center; width:fit-content;}
+.daily img { width:40px;height:40px;margin-right:8px;border-radius:50%;}
+button { margin-left:10px; padding:5px 10px; }
+/* ---------- MODAL ---------- */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-card {
+  background: linear-gradient(145deg, #1e1e2f, #2a2a40);
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+  width: 350px;
+  animation: popIn 0.3s ease-out;
+}
+
+.modal-icon {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px gold;
+}
+
+.modal-stats p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.modal-card button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  background: gold;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+</style>
+</head>
+<body>
+<audio id="winSound" src="./sounds/victory.mp3" preload="auto"></audio>
+<audio id="wrongGuessSound" src="./sounds/wrong_guess.mp3" preload="auto"></audio>
+<h1>ENStarsdle</h1>
+
+<div class="dropdown">
+  <input type="text" id="guessInput" placeholder="Type to guess a character">
+  <div class="dropdown-content" id="dropdown"></div>
+</div>
+
+<div class="feedback" id="feedback"></div>
+
+<div id="statsModal" class="modal-overlay hidden">
+  <div class="modal-card">
+    <img id="modalCharacterIcon" class="modal-icon" />
+    <h2 id="modalCharacterName"></h2>
+    <div class="modal-stats">
+      <p id="modalStreak"></p>
+      <p id="modalAverage"></p>
+      <p id="modalTodayGuesses"></p>
+    </div>
+    <button id="closeModalBtn">Close</button>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+
+// ---------- FIREWORKS ----------
+function fireworks() {
+    const duration = 5000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+
+    function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    const interval = setInterval(function() {
+        const timeLeft = animationEnd - Date.now();
+        if (timeLeft <= 0) return clearInterval(interval);
+
+        const particleCount = 50 * (timeLeft / duration);
+
+        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+    }, 250);
+}
+
+// ---------- STARS ----------
+function starBurst() {
+    const defaults = {
+        spread: 360,
+        ticks: 50,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+        colors: ['#FFE400', '#FFBD00', '#E89400', '#FFCA6C', '#FDFFB8'],
+        zIndex: 1000
+    };
+
+    function shoot() {
+        confetti({
+            ...defaults,
+            particleCount: 40,
+            scalar: 1.2,
+            shapes: ['star']
+        });
+
+        confetti({
+            ...defaults,
+            particleCount: 10,
+            scalar: 0.75,
+            shapes: ['circle']
+        });
+    }
+
+    setTimeout(shoot, 0);
+    setTimeout(shoot, 100);
+    setTimeout(shoot, 200);
+}
+
+// ---------- WAVE ----------
+function animateWave(guessRow) {
+    if (!guessRow) return;
+
+    guessRow.classList.add('wave-row');
+
+    const cells = Array.from(guessRow.children);
+
+    cells.forEach((cell, i) => {
+        setTimeout(() => {
+            cell.classList.add('wave-cell');
+            setTimeout(() => cell.classList.remove('wave-cell'), 5000);
+        }, i * 150);
+    });
+
+    setTimeout(() => guessRow.classList.remove('wave-row'), 5000);
+}
+
+function showStatsModal() {
+    const modal = document.getElementById('statsModal');
+    const icon = document.getElementById('modalCharacterIcon');
+    const name = document.getElementById('modalCharacterName');
+
+    const streak = document.getElementById('modalStreak');
+    const avg = document.getElementById('modalAverage');
+    const today = document.getElementById('modalTodayGuesses');
+
+    // Character icon
+    icon.src = `./images/characters/${getCharacterFolder(dailyCharacter)}/icon.png`;
+    name.innerHTML = `Today's character was:<br>${dailyCharacter.first_name} ${dailyCharacter.last_name ?? ''}`;
+
+    // Stats
+    streak.textContent = `🔥 Streak: ${getStreak()} days`;
+    avg.textContent = `📊 Average guesses: ${getAverageGuesses()}`;
+    today.textContent = `🎯 Guesses today: ${feedbackDiv.children.length}`;
+
+    modal.classList.remove('hidden');
+}
+
+document.getElementById('closeModalBtn').addEventListener('click', () => {
+    document.getElementById('statsModal').classList.add('hidden');
+});
+
+// -------------------------
+// CONFIG / DATA
+// -------------------------
+let gameWon = false;
+let characters = [];
+let dropdown = document.getElementById('dropdown');
+let input = document.getElementById('guessInput');
+let feedbackDiv = document.getElementById('feedback');
+let dailyCharacter = null;
+let remainingCharacters = [];
+
+// -------------------------
+// UTILITY FUNCTIONS
+// -------------------------
+function getTodayDate() {
+    return new Date().toISOString().slice(0,10); // YYYY-MM-DD
+    // return '2026-03-08'; // fixed date for testing
+}
+
+function getCharacterFolder(char) {
+    const first = char.first_name ?? '';
+    const last = char.last_name ?? '';
+
+    return last && last.trim() !== ''
+        ? `${first}_${last}`
+        : first;
+}
+
+// -------------------------
+// PICK / LOAD DAILY CHARACTER
+// -------------------------
+function pickDailyCharacter() {
+    if (characters.length === 0) return;
+    const index = Math.floor(Math.random() * characters.length);
+    dailyCharacter = characters[index];
+    remainingCharacters = [...characters]; // reset for a new day
+    remainingCharacters.sort((a, b) => a.first_name.localeCompare(b.first_name));
+}
+
+function dailyKey() {
+    return 'enstarsdleDaily:' + getTodayDate();
+}
+
+function saveDailyGame() {
+    const data = {
+        dailyCharacter,
+        guesses: Array.from(feedbackDiv.children).map(row => row.guessChar)
+    };
+    localStorage.setItem(dailyKey(), JSON.stringify(data));
+}
+
+function loadDailyGame() {
+    const data = JSON.parse(localStorage.getItem(dailyKey()) || 'null');
+
+    // No saved game for today -> fresh
+    if (!data) return false;
+
+    dailyCharacter = data.dailyCharacter;
+    remainingCharacters = characters.filter(c =>
+        !data.guesses?.some(g => g.first_name === c.first_name && g.last_name === c.last_name)
+    );
+
+    renderDropdown(remainingCharacters);
+
+    if (data.guesses && data.guesses.length > 0) {
+        data.guesses.forEach(guess => displayFeedback(guess));
+
+        // Check if the last guess was correct
+        const lastGuess = data.guesses[data.guesses.length - 1];
+        if (lastGuess.first_name === dailyCharacter.first_name &&
+            lastGuess.last_name === dailyCharacter.last_name) {
+            handleWin(true); // restore mode
+        }
+    }
+
+    return true;
+}
+
+// -------------------------
+// STREAK / AVERAGE TRACKING
+// -------------------------
+function saveStreak(wonToday) {
+    if (!wonToday) return; // no streak increase if they didn't win today
+
+    const today = getTodayDate(); // YYYY-MM-DD
+    let streakData = JSON.parse(localStorage.getItem('enstarsdleStreak') || '{}');
+
+    const lastDate = streakData.lastDate || null;
+    const lastStreak = streakData.streak || 0;
+
+    if (lastDate) {
+        // calculate difference in days
+        const last = new Date(lastDate);
+        const curr = new Date(today);
+        const diffDays = Math.floor((curr - last) / (1000 * 60 * 60 * 24));
+
+        if (diffDays === 1) {
+            // consecutive day → increment streak
+            streakData.streak = lastStreak + 1;
+        } else if (diffDays > 1) {
+            // missed one or more days → reset streak
+            streakData.streak = 1;
+        } else if (diffDays === 0) {
+            // already counted today → do nothing
+            streakData.streak = lastStreak;
+        }
+    } else {
+        // first win ever
+        streakData.streak = 1;
+    }
+
+    streakData.lastDate = today;
+    localStorage.setItem('enstarsdleStreak', JSON.stringify(streakData));
+}
+
+function getStreak() {
+    const streakData = JSON.parse(localStorage.getItem('enstarsdleStreak') || '{}');
+    return streakData.streak || 0;
+}
+
+function saveAverageGuesses(numGuesses) {
+    let data = JSON.parse(localStorage.getItem('enstarsdleStats') || '{}');
+    data.totalGames = (data.totalGames || 0) + 1;
+    data.totalGuesses = (data.totalGuesses || 0) + numGuesses;
+    localStorage.setItem('enstarsdleStats', JSON.stringify(data));
+}
+
+function getAverageGuesses() {
+    const data = JSON.parse(localStorage.getItem('enstarsdleStats') || '{}');
+    if (!data.totalGames) return 0;
+    return (data.totalGuesses / data.totalGames).toFixed(2);
+}
+
+// -------------------------
+// DROPDOWN / AUTOCOMPLETE
+// -------------------------
+function initDropdown() {
+    renderDropdown(remainingCharacters);
+    input.addEventListener('input', onInput);
+    input.addEventListener('focus', () => dropdown.style.display = 'block');
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.dropdown')) dropdown.style.display = 'none';
+    });
+}
+
+function renderDropdown(list) {
+    dropdown.innerHTML = '';
+    if (list.length === 0) {
+        const div = document.createElement('div');
+        div.textContent = 'No matches';
+        dropdown.appendChild(div);
+        return;
+    }
+
+    list.forEach(c => {
+        const div = document.createElement('div');
+        const img = document.createElement('img');
+        img.src = `./images/characters/${getCharacterFolder(c)}/icon.png`;
+        img.onerror = () => { img.style.display = 'none'; };
+        div.appendChild(img);
+        div.appendChild(document.createTextNode(`${c.first_name} ${c.last_name}`));
+        div.addEventListener('click', () => {
+            input.value = `${c.first_name} ${c.last_name}`;
+            dropdown.style.display = 'none';
+            handleGuess(c);
+        });
+        dropdown.appendChild(div);
+    });
+}
+
+function onInput() {
+    const val = input.value.trim().toLowerCase();
+    const filtered = remainingCharacters.filter(c =>
+        c.first_name.toLowerCase().includes(val) ||
+        c.last_name.toLowerCase().includes(val)
+    );
+    renderDropdown(filtered);
+    dropdown.style.display = 'block';
+}
+
+// -------------------------
+// HANDLE GUESS AND WIN CHECK
+// -------------------------
+function handleGuess(guessChar) {
+    if (gameWon) return;
+
+    remainingCharacters = remainingCharacters.filter(c =>
+        c.first_name !== guessChar.first_name ||
+        c.last_name !== guessChar.last_name
+    );
+
+    renderDropdown(remainingCharacters);
+    input.value = '';
+
+    displayFeedback(guessChar);
+    saveDailyGame(); // save after every guess
+
+    if (guessChar.first_name === dailyCharacter.first_name &&
+        guessChar.last_name === dailyCharacter.last_name) {
+        handleWin();
+    } else {
+        document.getElementById('wrongGuessSound').play();
+    }
+}
+
+function handleWin(isRestore = false) {
+
+    gameWon = true;
+    input.disabled = true;
+    dropdown.style.display = 'none'; 
+    const numGuesses = feedbackDiv.children.length;
+    input.placeholder = `You guessed correctly in ${numGuesses} ${numGuesses === 1 ? 'try' : 'tries'} 🎉`;
+
+    if (!isRestore) {
+        setTimeout(() => showStatsModal(), 5000);
+        document.getElementById('winSound').play();
+        fireworks();
+        starBurst();
+        setTimeout(() => starBurst(), 1000);
+        setTimeout(() => starBurst(), 2000);
+        setTimeout(() => starBurst(), 3000);
+
+        const lastGuessRow = feedbackDiv.lastElementChild;
+        animateWave(lastGuessRow);
+
+        saveStreak(true);
+        saveAverageGuesses(feedbackDiv.children.length);
+    }
+
+    if (isRestore) {
+        const lastGuessRow = feedbackDiv.lastElementChild;
+        if (lastGuessRow) lastGuessRow.style.boxShadow = "0 0 15px gold";
+        showStatsModal();
+    }
+}
+
+// -------------------------
+// DISPLAY FEEDBACK
+// -------------------------
+function displayFeedback(guessChar) {
+    const guessRow = document.createElement('div');
+    guessRow.className = 'guess-row';
+    guessRow.guessChar = guessChar;
+
+    function createCell(content, correct, extraClass='') {
+        const cell = document.createElement('div');
+        cell.className = `guess-cell ${extraClass} ${correct ? 'correct' : 'wrong'}`;
+        if (correct) {
+            cell.style.background = 'linear-gradient(145deg, #a8e6a1, #7ed77e)';
+        } else {
+            cell.style.background = 'linear-gradient(145deg, #f5a8a8, #e77e7e)';
+        }
+        cell.style.boxShadow = 'inset 0 3px 8px rgba(255,255,255,0.2), 0 2px 5px rgba(0,0,0,0.3)';
+        if (typeof content === 'string') cell.textContent = content;
+        else cell.appendChild(content);
+        return cell;
+    }
+
+    // FACE ICON
+    const iconImg = document.createElement('img');
+    iconImg.src = `./images/characters/${getCharacterFolder(guessChar)}/icon.png`;
+    iconImg.style.width = '110%';
+    iconImg.style.height = '110%';
+    iconImg.style.objectFit = 'cover';
+    iconImg.onerror = () => iconImg.style.display = 'none';
+    const iconCell = document.createElement('div');
+    iconCell.className = 'guess-cell icon-cell';
+    iconCell.appendChild(iconImg);
+    guessRow.appendChild(iconCell);
+
+    // HEIGHT
+    let heightText = '?';
+    let heightCorrect = false;
+    if (dailyCharacter.height !== undefined && guessChar.height !== undefined) {
+        if (guessChar.height > dailyCharacter.height) heightText = `< ${guessChar.height}`;
+        else if (guessChar.height < dailyCharacter.height) heightText = `> ${guessChar.height}`;
+        else { heightText = `${guessChar.height}`; heightCorrect = true; }
+    }
+    guessRow.appendChild(createCell(heightText, heightCorrect));
+
+    // BIRTHDAY
+    function formatBirthday(birthday) {
+        const userLang = navigator.language || 'en-US';
+        const [month, day] = birthday.split('-').map(Number);
+        // year 2000 is arbitrary, we just need month/day
+        const dateObj = new Date(2000, month - 1, day);
+        return dateObj.toLocaleDateString(userLang, { month: '2-digit', day: '2-digit' });
+    }
+    let birthdayText = '?';
+    let birthdayCorrect = false;
+
+    if (dailyCharacter.birthday && guessChar.birthday) {
+        // convert internal MM-DD to Date object for formatting
+        const [gM, gD] = guessChar.birthday.split('-').map(Number);
+        const [aM, aD] = dailyCharacter.birthday.split('-').map(Number);
+
+        if (gM < aM || (gM === aM && gD < aD)) birthdayText = formatBirthday(guessChar.birthday) + ' <';
+        else if (gM > aM || (gM === aM && gD > aD)) birthdayText = '> ' + formatBirthday(guessChar.birthday);
+        else { birthdayText = formatBirthday(guessChar.birthday); birthdayCorrect = true; }
+    }
+
+    guessRow.appendChild(createCell(birthdayText, birthdayCorrect));
+
+    // HANDEDNESS
+    const handedness = guessChar.handedness ?? '?';
+    guessRow.appendChild(createCell(handedness, handedness === dailyCharacter.handedness));
+
+    // SCHOOL
+    const guessSchool = guessChar.school ?? 'Not in school';
+    const correctSchool = dailyCharacter.school ?? 'Not in school';
+    guessRow.appendChild(createCell(guessSchool, guessSchool === correctSchool));
+
+    // CLASS
+    const guessClass = guessChar.class ?? 'Not in school';
+    const correctClass = dailyCharacter.class ?? 'Not in school';
+    guessRow.appendChild(createCell(guessClass, guessClass === correctClass));
+
+    // AGENCY
+    const guessAgency = guessChar.agency ?? '?';
+    const correctAgency = dailyCharacter.agency ?? '?';
+    const agencyImg = document.createElement('img');
+    agencyImg.style.width = '90%';
+    agencyImg.style.height = '90%';
+    agencyImg.style.objectFit = 'contain';
+    if (guessAgency !== '?') agencyImg.src = `./images/Agencies/${guessAgency}.png`;
+    agencyImg.onerror = () => agencyImg.style.display = 'none';
+    guessRow.appendChild(createCell(agencyImg, guessAgency === correctAgency));
+
+    // UNIT
+    const guessUnit = guessChar.unit ?? '?';
+    const correctUnit = dailyCharacter.unit ?? '?';
+    const unitImg = document.createElement('img');
+    unitImg.style.width = '90%';
+    unitImg.style.height = '90%';
+    unitImg.style.objectFit = 'contain';
+    if (guessUnit !== '?') {
+        if (guessUnit === 'Crazy:B') unitImg.src = `./images/Units/CrazyB.png`;
+        else if (guessUnit === 'Ra*bits') unitImg.src = `./images/Units/Ra'bits.png`;
+        else unitImg.src = `./images/Units/${guessUnit}.png`;
+    }
+    unitImg.onerror = () => unitImg.style.display = 'none';
+    guessRow.appendChild(createCell(unitImg, guessUnit === correctUnit, 'last-cell'));
+
+    feedbackDiv.appendChild(guessRow);
+}
+
+// -------------------------
+// INITIALIZATION
+// -------------------------
+fetch('characters.json')
+  .then(res => res.json())
+  .then(data => {
+      characters = data;
+      remainingCharacters = [...characters];
+      // Load previous game if it exists
+      if (!loadDailyGame()) pickDailyCharacter(); 
+
+      initDropdown();
+  })
+  .catch(err => {
+      console.error('Error loading characters.json:', err);
+      dropdown.innerHTML = `<div style="color:red;">Error loading characters.json. Check console.</div>`;
+  });
+
+// -------------------------
+// MIDNIGHT REFRESH (optional UX)
+// -------------------------
+function scheduleMidnightRefresh() {
+    const now = new Date();
+    const nextMidnight = new Date();
+    nextMidnight.setHours(24,0,0,0);
+    const msUntilMidnight = nextMidnight - now;
+
+    setTimeout(() => location.reload(), msUntilMidnight);
+}
+scheduleMidnightRefresh();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ENStarsdle</title>
+<link rel="icon" href="./images/icon.png" type="image/png">
+<style>
+/* ---------- FONT ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;500&display=swap');
+body { font-family: sans-serif; padding: 20px; background: url('./images/background.png') no-repeat center center fixed; background-size: cover; display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);}
+h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3em;
+    margin: 0;
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFAA00, 0 0 20px #FFDD55;
+}
+.dropdown { position: relative; display: inline-block; }
+input {
+    width: 840px;
+    padding: 12px 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    outline: none;
+    transition: 0.3s all;
+    background-color: rgba(20, 20, 20, 0.95);
+    color: #fff;
+    box-sizing: border-box;
+}
+input:focus {
+    border-color: #FFDD55;
+    box-shadow: 0 0 15px rgba(255, 221, 85, 0.7);
+    border-radius: 12px 12px 0 0;
+    border-bottom-color: transparent;
+}
+input::placeholder { font-family: 'Fredoka One', cursive; color: rgba(255, 255, 255, 0.7); font-weight: 400; }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    border: 2px solid #FFD700;
+    border-top: none;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    background-color: rgba(20, 20, 20, 0.95);
+    z-index: 1000;
+    scrollbar-width: none;
+    box-sizing: border-box;
+}
+.dropdown-content::-webkit-scrollbar { display: none; }
+.dropdown-content div {
+    font-family: 'Fredoka One', cursive;
+    padding: 12px 15px;
+    font-size: 17px;
+    min-height: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    transition: 0.2s all;
+}
+.dropdown-content div:hover { background: linear-gradient(90deg, #FFD700, #FFDD55); color: #000; transform: scale(1.03); }
+.dropdown-content img { width: 40px; height: 40px; margin-right: 10px; object-fit: cover; }
+.correct { background: linear-gradient(145deg, #a8e6a1, #6fd68a); border: 1px solid #50b870; box-shadow: 0 4px 8px rgba(108, 203, 123, 0.6); }
+.wrong { background: linear-gradient(145deg, #f5a8a8, #e07d7d); border: 1px solid #d43f3f; box-shadow: 0 4px 8px rgba(245, 168, 168, 0.6); }
+button { margin-left:10px; padding:5px 10px; }
+
+/* ---------- MODAL ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.hidden { display: none; }
+.modal-card {
+  background: linear-gradient(145deg, #1e1e2f, #2a2a40);
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+  width: 350px;
+  animation: popIn 0.3s ease-out;
+}
+.modal-icon { width: 120px; height: 120px; object-fit: cover; margin-bottom: 15px; box-shadow: 0 0 15px gold; }
+.modal-stats p { margin: 10px 0; font-size: 18px; }
+.modal-card button { margin-top: 20px; padding: 10px 25px; border: none; border-radius: 20px; background: gold; cursor: pointer; font-weight: bold; }
+@keyframes popIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* ---------- CG CANVAS ---------- */
+#cgContainer{
+  width: 840px;
+  height: 387px;
+  margin:20px auto;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+#cgCanvas{
+  width:100%;
+  height:100%;
+  display:block;
+}
+</style>
+</head>
+<body>
+<audio id="winSound" src="./sounds/victory.mp3" preload="auto"></audio>
+<audio id="wrongGuessSound" src="./sounds/wrong_guess.mp3" preload="auto"></audio>
+<h1>ENStarsdle</h1>
+
+<div id="cgContainer">
+  <canvas id="cgCanvas"></canvas>
+</div>
+
+<div class="dropdown">
+  <input type="text" id="guessInput" placeholder="Type to guess a character">
+  <div class="dropdown-content" id="dropdown"></div>
+</div>
+
+<div id="statsModal" class="modal-overlay hidden">
+  <div class="modal-card">
+    <img id="modalCharacterIcon" class="modal-icon" />
+    <h2 id="modalCharacterName"></h2>
+    <div class="modal-stats">
+      <p id="modalStreak"></p>
+      <p id="modalAverage"></p>
+      <p id="modalTodayGuesses"></p>
+    </div>
+    <button id="closeModalBtn">Close</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+
+// ---------- FIREWORKS ----------
+function fireworks() {
+    const duration = 5000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+
+    function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    const interval = setInterval(function() {
+        const timeLeft = animationEnd - Date.now();
+        if (timeLeft <= 0) return clearInterval(interval);
+
+        const particleCount = 50 * (timeLeft / duration);
+
+        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+    }, 250);
+}
+
+// ---------- STARS ----------
+function starBurst() {
+    const defaults = {
+        spread: 360,
+        ticks: 50,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+        colors: ['#FFE400', '#FFBD00', '#E89400', '#FFCA6C', '#FDFFB8'],
+        zIndex: 1000
+    };
+
+    function shoot() {
+        confetti({
+            ...defaults,
+            particleCount: 40,
+            scalar: 1.2,
+            shapes: ['star']
+        });
+
+        confetti({
+            ...defaults,
+            particleCount: 10,
+            scalar: 0.75,
+            shapes: ['circle']
+        });
+    }
+
+    setTimeout(shoot, 0);
+    setTimeout(shoot, 100);
+    setTimeout(shoot, 200);
+}   
+
+const canvas = document.getElementById('cgCanvas');
+const ctx = canvas.getContext('2d');
+
+let gameWon = false;
+let characters = [];
+let dropdown = document.getElementById('dropdown');
+let input = document.getElementById('guessInput');
+let dailyCharacter = null;
+let remainingCharacters = [];
+let cards = [];
+let currentCard = null;
+let zoomLevel = 0;
+let maxZoomSteps = 6;
+let randomX = 50;
+let randomY = 50;
+let guessCount = 0;
+let guessedCharacter = null;
+let cgGuessMode = false;
+let cgNames = [];
+
+canvas.width = 840;
+canvas.height = 387;
+
+let cgImage = new Image();
+
+function updateCanvas(){
+
+    if(!currentCard) return;
+
+    cgImage.src = currentCard.imagePath;
+
+    cgImage.onload = () => {
+
+        const imgW = cgImage.width;
+        const imgH = cgImage.height;
+
+        const zoomFactor = 0.25 + (zoomLevel / maxZoomSteps) * 0.75;
+        // 0.25 = very zoomed
+        // 1.0 = full image
+
+        const cropW = imgW * zoomFactor;
+        const cropH = imgH * zoomFactor;
+
+        const maxX = imgW - cropW;
+        const maxY = imgH - cropH;
+
+        const cropX = randomX * maxX;
+        const cropY = randomY * maxY;
+
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+
+        ctx.drawImage(
+            cgImage,
+            cropX, cropY, cropW, cropH,
+            0,0,canvas.width,canvas.height
+        );
+    }
+}
+
+function pickRandomCard() {
+    if(cards.length === 0) return;
+    currentCard = cards[Math.floor(Math.random() * cards.length)];
+    //currentCard = cards[408]; // for testing CG guess mode 76 is group CG 408 is Himeru
+    zoomLevel = 0;
+    randomX = Math.random();
+    randomY = Math.random();
+    updateCanvas();
+}
+
+function prepareCGGuessList(){
+
+    cgNames = [];
+
+    let targetCharacter;
+
+    if(currentCard.specialTag === "Group CG"){
+        targetCharacter = guessedCharacter;
+    }else{
+        targetCharacter = currentCard.characters[0];
+    }
+
+    cards.forEach(card => {
+
+        if(card.characters.includes(targetCharacter)){
+
+            let cgNameToAdd;
+
+            if(card.specialTag === "Group CG" && card.allCgNamesVariants){
+
+                const index = card.characters.indexOf(targetCharacter);
+
+                if(index !== -1){
+                    cgNameToAdd = card.allCgNamesVariants[index];
+                }else{
+                    cgNameToAdd = card.cgName;
+                }
+
+            }else{
+                cgNameToAdd = card.cgName;
+            }
+
+            cgNames.push(cgNameToAdd);
+        }
+    });
+
+    cgNames.sort();
+}
+
+// ------------- HANDLE GUESSES -------------
+function handleGuess(guessChar) {
+    if (gameWon) return;
+
+    const fullName = guessChar.last_name && guessChar.last_name.trim() !== ''
+        ? `${guessChar.first_name} ${guessChar.last_name}`
+        : guessChar.first_name;
+
+    remainingCharacters = remainingCharacters.filter(c =>
+        c.first_name !== guessChar.first_name || c.last_name !== guessChar.last_name
+    );
+
+    renderDropdown(remainingCharacters);
+    input.value = '';
+    guessCount++;
+
+    if (currentCard.characters.includes(fullName)) {
+        guessedCharacter = fullName;
+        handleWin();
+    } else {
+        document.getElementById('wrongGuessSound').play();
+        if (zoomLevel < maxZoomSteps) {
+            zoomLevel++;
+            updateCanvas();
+        }
+    }
+}
+
+function handleCGGuess(name){
+
+    input.value = '';
+
+    let correctName;
+
+    if(currentCard.specialTag === "Group CG" && currentCard.allCgNamesVariants){
+
+        const index = currentCard.characters.indexOf(guessedCharacter);
+
+        correctName = currentCard.allCgNamesVariants[index];
+
+    }else{
+        correctName = currentCard.cgName;
+    }
+
+    if(name === correctName){
+
+        input.disabled = true;
+        input.placeholder = "You guessed correctly! The CG was: " + correctName + " 🎉";
+
+        document.getElementById('winSound').play();
+        fireworks();
+        starBurst();
+
+    }else{
+
+        input.disabled = true;
+        input.placeholder = "The correct CG was: " + correctName;
+
+        document.getElementById('wrongGuessSound').play();
+
+    }
+}
+
+function handleWin() {
+    gameWon = true;
+    cgGuessMode = true;
+    input.disabled = false;
+    dropdown.style.display = 'block';
+    zoomLevel = maxZoomSteps;
+    updateCanvas();
+    document.getElementById('winSound').play();
+    prepareCGGuessList();
+    renderDropdown(cgNames, true);
+    input.placeholder = "Guess the CG name...";
+    fireworks();
+    starBurst();
+    setTimeout(() => starBurst(), 1000);
+    setTimeout(() => starBurst(), 2000);
+    setTimeout(() => starBurst(), 3000);
+}
+
+// ------------------ INIT ------------------
+fetch('characters.json')
+  .then(res => res.json())
+  .then(data => {
+      // keep only characters that actually have CGs
+      characters = data.filter(c => c.hasCG === true);
+      remainingCharacters = [...characters];
+      remainingCharacters.sort((a, b) => a.first_name.localeCompare(b.first_name));
+      initDropdown();
+  })
+  .catch(err => console.error(err));
+
+fetch('cards.json')
+  .then(res => res.json())
+  .then(data => {
+      cards = data;
+      pickRandomCard();
+  })
+  .catch(err => console.error(err));
+
+// ------------------ DROPDOWN ------------------
+function initDropdown() {
+    renderDropdown(remainingCharacters);
+    input.addEventListener('input', onInput);
+    input.addEventListener('focus', () => dropdown.style.display = 'block');
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.dropdown')) dropdown.style.display = 'none';
+    });
+}
+
+function renderDropdown(list, cgMode = false) {
+    dropdown.innerHTML = '';
+    if(list.length === 0){
+        const div = document.createElement('div');
+        div.textContent = 'No matches';
+        dropdown.appendChild(div);
+        return;
+    }
+    list.forEach(item => {
+        const div = document.createElement('div');
+        if(cgMode){
+            div.textContent = item;
+            div.addEventListener('click', () => {
+                input.value = item;
+                dropdown.style.display = 'none';
+                handleCGGuess(item);
+            });
+        }else{
+            const img = document.createElement('img');
+            img.src = `./images/characters/${getCharacterFolder(item)}/icon.png`;
+            img.onerror = () => { img.style.display = 'none'; };
+            div.appendChild(img);
+            div.appendChild(document.createTextNode(`${item.first_name} ${item.last_name}`));
+            div.addEventListener('click', () => {
+                input.value = `${item.first_name} ${item.last_name}`;
+                dropdown.style.display = 'none';
+                handleGuess(item);
+            });
+        }
+        dropdown.appendChild(div);
+    });
+}
+
+function onInput(){
+    const val = input.value.trim().toLowerCase();
+    if(cgGuessMode){
+        const filtered = cgNames.filter(name =>
+            name.toLowerCase().includes(val)
+        );
+        renderDropdown(filtered, true);
+    }else{
+        const filtered = remainingCharacters.filter(c =>
+            c.first_name.toLowerCase().includes(val) ||
+            c.last_name.toLowerCase().includes(val)
+        );
+        renderDropdown(filtered);
+    }
+    dropdown.style.display = 'block';
+}
+
+function getCharacterFolder(char){
+    const first = char.first_name ?? '';
+    const last = char.last_name ?? '';
+    return last && last.trim() !== '' ? `${first}_${last}` : first;
+}
+</script>
+</body>
+</html>
